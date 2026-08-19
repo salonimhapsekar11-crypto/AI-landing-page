@@ -3,7 +3,8 @@ import React from 'react';
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-textured-dark" style={{
-      padding: '5rem 1.5rem 2.5rem 1.5rem',
+      padding: '4.5rem 1.5rem',
+      height: 'auto',
       borderTop: '1px solid rgba(255, 255, 255, 0.1)'
     }}>
       <div className="container">
@@ -15,7 +16,7 @@ export const Footer: React.FC = () => {
           margin: '0 auto 4rem auto'
         }}>
           <h2 style={{
-            fontSize: 'clamp(2rem, 4vw, 2.75rem)',
+            fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
             fontFamily: 'var(--font-serif)',
             fontWeight: 700,
             color: '#FFFFFF',

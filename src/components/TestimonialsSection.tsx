@@ -2,16 +2,17 @@ import React from 'react';
 
 export const TestimonialsSection: React.FC = () => {
   return (
-    <section className="section" style={{
-      background: 'linear-gradient(180deg, var(--ink-blue) 0%, var(--ink-blue-dark) 100%)',
-      color: '#FFFFFF'
+    <section className="section bg-textured-dark" style={{
+      padding: '4.5rem 1.5rem',
+      background: 'linear-gradient(135deg, #1B0BA1EB, #140249EB)',
+      height: 'auto'
     }}>
       <div className="container">
         
         {/* Centered White Heading */}
-        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+        <div style={{ textAlign: 'left', marginBottom: '2.75rem' }}>
           <h2 style={{
-            fontSize: 'clamp(2.2rem, 4vw, 3.2rem)',
+            fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
             fontFamily: 'var(--font-serif)',
             fontWeight: 700,
             color: '#FFFFFF'

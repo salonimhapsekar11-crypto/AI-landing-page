@@ -49,18 +49,10 @@ export const AuditFormSection: React.FC = () => {
 
   return (
     <section id="audit-section" className="section" style={{ backgroundColor: 'var(--bg-offwhite-2)' }}>
-      <div className="container" style={{ maxWidth: '960px' }}>
+      <div className="container">
         
         {/* Floating Dark Blue Rounded Card (no shadow, textured overlay) */}
-        <div style={{
-          backgroundColor: 'var(--ink-blue)',
-          backgroundImage: `
-            radial-gradient(circle at 50% 0%, rgba(66, 194, 255, 0.35) 0%, rgba(34, 9, 136, 0.95) 80%),
-            url('/assets/bg-hero.png')
-          `,
-          backgroundBlendMode: 'multiply, normal',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+        <div className="bg-textured-dark" style={{
           borderRadius: 'var(--radius-lg)',
           padding: 'clamp(2.5rem, 5vw, 4rem)',
           color: '#FFFFFF'
@@ -69,7 +61,7 @@ export const AuditFormSection: React.FC = () => {
           {/* Centered Heading + Subcopy */}
           <div style={{ textAlign: 'center', marginBottom: '2.5rem', maxWidth: '640px', margin: '0 auto 2.5rem auto' }}>
             <h2 style={{
-              fontSize: 'clamp(2.2rem, 4vw, 3.2rem)',
+              fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
               fontFamily: 'var(--font-serif)',
               fontWeight: 700,
               color: '#FFFFFF',

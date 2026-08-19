@@ -6,9 +6,9 @@ export const PersonaSection: React.FC = () => {
       <div className="container">
         
         {/* Centered Heading */}
-        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+        <div style={{ textAlign: 'left', marginBottom: '2.75rem' }}>
           <h2 style={{
-            fontSize: 'clamp(2.2rem, 4vw, 3.2rem)',
+            fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
             fontFamily: 'var(--font-serif)',
             fontWeight: 700,
             color: 'var(--black)'
@@ -36,7 +36,8 @@ export const PersonaSection: React.FC = () => {
                 lineHeight: 1.3,
                 marginBottom: '1.25rem'
               }}>
-                I'm juggling everything and <mark>my systems live in my head.</mark>
+                I'm juggling everything and <br />
+                <mark>my systems live in my head.</mark>
               </h3>
 
               <p style={{
@@ -86,7 +87,8 @@ export const PersonaSection: React.FC = () => {
                 lineHeight: 1.3,
                 marginBottom: '1.25rem'
               }}>
-                Your team has shared accounts <mark>no actual system.</mark>
+                Your team has shared accounts <br />
+                <mark>no actual system.</mark>
               </h3>
 
               <p style={{

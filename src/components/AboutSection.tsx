@@ -24,12 +24,13 @@ export const AboutSection: React.FC = () => {
             margin: '0 auto'
           }}>
             <img 
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
+              src="/assets/about-me.jpg" 
               alt="Saloni Mhapsekar" 
               style={{
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
+                objectPosition: 'center top',
                 display: 'block'
               }}
             />
@@ -38,7 +39,7 @@ export const AboutSection: React.FC = () => {
           {/* Bio Copy in White */}
           <div>
             <h2 style={{
-              fontSize: 'clamp(2.4rem, 4.5vw, 3.5rem)',
+              fontSize: 'clamp(2rem, 3.5vw, 2.75rem)',
               fontFamily: 'var(--font-serif)',
               fontWeight: 700,
               color: '#FFFFFF',

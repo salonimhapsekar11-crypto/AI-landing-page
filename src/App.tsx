@@ -19,8 +19,8 @@ export const App: React.FC = () => {
         <AuditFormSection />
         <TestimonialsSection />
         <LeverageSection />
-        <WorkshopsSection />
         <AboutSection />
+        <WorkshopsSection />
       </main>
       <Footer />
     </div>

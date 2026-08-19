@@ -1,6 +1,6 @@
 :root {
   --font-serif: 'Fraunces', Georgia, serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Stack Sans Text', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
   --ink-blue: #220988;
   --ink-blue-dark: #140459;
@@ -73,26 +73,41 @@ mark {
 }
 
 .section {
-  padding: 5rem 1.5rem;
+  padding: 4.5rem 1.5rem; /* Reduced for vertical compactness */
   width: 100%;
+  margin-bottom: 4px; /* Neutral background seam between sections */
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 3.5rem 1rem;
+    padding: 3rem 1rem;
   }
 }
 
 /* Textured Dark Blue Section Background */
 .bg-textured-dark {
   background-color: var(--ink-blue);
-  background-image: 
-    radial-gradient(circle at 75% 25%, rgba(66, 194, 255, 0.25) 0%, rgba(34, 9, 136, 0.95) 70%),
-    url('/assets/bg-hero.png');
-  background-blend-mode: multiply, normal;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-textured-dark::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('/assets/bg-hero.png');
   background-size: cover;
   background-position: center;
-  color: #FFFFFF;
+  background-attachment: fixed;
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.bg-textured-dark > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Button Component Variants */
