@@ -2,22 +2,23 @@
   --font-serif: 'Fraunces', Georgia, serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
-  --bg-page: #FAF9F5;
-  --bg-blue: #160DBA;
-  --bg-blue-dark: #0F0878;
-  --bg-dark-card: #08042B;
+  --ink-blue: #220988;
+  --ink-blue-dark: #140459;
+  --bg-offwhite-1: #f4f4f0;
+  --bg-offwhite-2: #F6F2EA;
+  --pure-white: #ffffff;
+  --black: #000000;
   
-  --text-main: #000000;
-  --text-muted: #4B5563;
-  --text-light: #FFFFFF;
-  
-  --highlight-yellow: #FFE600;
-  --btn-cyan: #38BDF8;
-  --btn-orange: #FF6347;
+  --yellow-cta: #FFD700;
+  --yellow-cta-hover: #E6C200;
+  --coral-accent: #ff6a4d;
+  --coral-accent-hover: #E85538;
+  --skyblue-accent: #42C2FF;
 
-  --border-black: 2px solid #000000;
+  --border-thick: 2.5px solid #000000;
   --shadow-hard: 6px 6px 0px #000000;
-  
+  --shadow-hard-pressed: 2px 2px 0px #000000;
+
   --radius-pill: 9999px;
   --radius-card: 20px;
   --radius-lg: 28px;
@@ -36,8 +37,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-page);
-  color: var(--text-main);
+  background-color: var(--bg-offwhite-1);
+  color: var(--black);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -54,9 +55,10 @@ a {
   text-decoration: none;
 }
 
+/* Yellow Text Highlights */
 mark {
-  background-color: var(--highlight-yellow);
-  color: #000000;
+  background-color: var(--yellow-cta);
+  color: var(--black);
   padding: 2px 6px;
   font-weight: 700;
   border-radius: 3px;
@@ -81,32 +83,83 @@ mark {
   }
 }
 
-/* Button variants */
-.btn-pill-white {
-  background-color: #FFFFFF;
-  color: var(--bg-blue);
-  font-weight: 600;
-  padding: 0.85rem 2rem;
+/* Textured Dark Blue Section Background */
+.bg-textured-dark {
+  background-color: var(--ink-blue);
+  background-image: 
+    radial-gradient(circle at 75% 25%, rgba(66, 194, 255, 0.25) 0%, rgba(34, 9, 136, 0.95) 70%),
+    url('/assets/bg-hero.png');
+  background-blend-mode: multiply, normal;
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+}
+
+/* Button Component Variants */
+.btn-yellow {
+  background-color: var(--yellow-cta);
+  color: var(--black);
+  font-weight: 700;
+  padding: 0.9rem 2.25rem;
   border-radius: var(--radius-pill);
   border: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
-.btn-pill-white:hover {
+.btn-yellow:hover {
+  background-color: var(--yellow-cta-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.btn-yellow-outline {
+  background-color: transparent;
+  color: var(--yellow-cta);
+  border: 2px solid var(--yellow-cta);
+  font-weight: 700;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-yellow-outline:hover {
+  background-color: var(--yellow-cta);
+  color: var(--black);
+}
+
+.btn-coral {
+  background-color: var(--coral-accent);
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0.9rem 2.25rem;
+  border-radius: var(--radius-pill);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-coral:hover {
+  background-color: var(--coral-accent-hover);
+  transform: translateY(-2px);
 }
 
 .btn-pill-outline {
   background-color: transparent;
-  color: #000000;
-  border: 1.5px solid #000000;
+  color: var(--black);
+  border: 1.5px solid var(--black);
   font-weight: 600;
-  padding: 0.75rem 1.75rem;
+  padding: 0.65rem 1.65rem;
   border-radius: var(--radius-pill);
   display: inline-flex;
   align-items: center;
@@ -116,74 +169,46 @@ mark {
 }
 
 .btn-pill-outline:hover {
-  background-color: #000000;
+  background-color: var(--black);
   color: #FFFFFF;
 }
 
-.btn-pill-cyan {
-  background-color: var(--btn-cyan);
-  color: #000000;
-  font-weight: 700;
-  padding: 0.85rem 2rem;
-  border-radius: var(--radius-pill);
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.2s ease;
-}
-
-.btn-pill-cyan:hover {
-  opacity: 0.9;
-}
-
-.btn-pill-orange {
-  background-color: var(--btn-orange);
+.btn-pill-outline-white {
+  background-color: transparent;
   color: #FFFFFF;
-  font-weight: 700;
+  border: 1.5px solid #FFFFFF;
+  font-weight: 600;
   padding: 0.85rem 2rem;
   border-radius: var(--radius-pill);
-  border: none;
-  cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.btn-pill-orange:hover {
-  transform: translateY(-2px);
+.btn-pill-outline-white:hover {
+  background-color: #FFFFFF;
+  color: var(--black);
 }
 
-/* Card Hard Shadow Styling */
+/* Card Hard Shadow with Press-Down Hover Animation */
 .card-hard-shadow {
   background-color: #FFFFFF;
-  border: 2.5px solid #000000;
+  border: var(--border-thick);
   box-shadow: var(--shadow-hard);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Form Inputs Pill */
-.input-pill {
-  width: 100%;
-  background-color: #FFFFFF;
-  border: none;
-  border-radius: var(--radius-pill);
-  padding: 0.9rem 1.5rem;
-  font-size: 1rem;
-  font-family: var(--font-sans);
-  color: #000000;
-  outline: none;
-}
-
-.input-pill::placeholder {
-  color: #9CA3AF;
+.card-hard-shadow:hover {
+  transform: translate(3px, 3px);
+  box-shadow: var(--shadow-hard-pressed);
 }
 
 /* Window Control Dots */
@@ -194,11 +219,29 @@ mark {
 }
 
 .dot {
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
 }
 
 .dot-red { background-color: #FF5F56; }
 .dot-yellow { background-color: #FFBD2E; }
 .dot-green { background-color: #27C93F; }
+
+/* Form Pill Inputs */
+.input-pill-white {
+  width: 100%;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  color: var(--black);
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.input-pill-white::placeholder {
+  color: #9CA3AF;
+}

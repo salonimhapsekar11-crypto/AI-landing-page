@@ -3,140 +3,162 @@ import { ArrowUpRight } from 'lucide-react';
 
 export const WorkshopsSection: React.FC = () => {
   return (
-    <section className="section" style={{ backgroundColor: '#160DBA' }}>
+    <section className="section" style={{ backgroundColor: 'var(--bg-offwhite-2)' }}>
       <div className="container">
         
+        {/* Centered Heading */}
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
           <h2 style={{
             fontSize: 'clamp(2.2rem, 4vw, 3.2rem)',
             fontFamily: 'var(--font-serif)',
             fontWeight: 700,
-            color: '#FFFFFF'
+            color: 'var(--ink-blue)'
           }}>
             Saloni's Next Workshops
           </h2>
         </div>
 
+        {/* 2-Column Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '2.5rem',
           alignItems: 'stretch'
-        }} className="workshop-grid">
+        }}>
           
-          {/* Card 1 */}
+          {/* Workshop Card 1 */}
           <div style={{
             backgroundColor: '#FFFFFF',
-            borderRadius: '20px',
-            padding: '2.5rem',
+            borderRadius: 'var(--radius-card)',
+            overflow: 'hidden',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.05)',
+            border: '1.5px solid rgba(0, 0, 0, 0.08)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            boxShadow: '0 12px 32px rgba(0, 0, 0, 0.15)'
+            height: '100%'
           }}>
             <div>
-              <span style={{
-                display: 'inline-block',
-                backgroundColor: '#FFE600',
-                color: '#000000',
-                fontWeight: 700,
-                fontSize: '0.8rem',
-                padding: '4px 14px',
-                borderRadius: '9999px',
-                marginBottom: '1.25rem'
+              {/* Square Poster Image */}
+              <div style={{
+                width: '100%',
+                aspectRatio: '16/9',
+                backgroundColor: 'var(--ink-blue)',
+                position: 'relative',
+                overflow: 'hidden'
               }}>
-                Claude Code + Notion
-              </span>
+                <img 
+                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" 
+                  alt="Claude Code + Notion Workshop" 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
+              </div>
 
-              <h3 style={{
-                fontSize: '1.5rem',
-                fontFamily: 'var(--font-sans)',
-                fontWeight: 700,
-                color: '#000000',
-                lineHeight: 1.3,
-                marginBottom: '1rem'
-              }}>
-                Hands-On with Claude Code + Notion: Build Your AI Content System
-              </h3>
+              {/* Title & Description */}
+              <div style={{ padding: '2rem 2rem 1rem 2rem' }}>
+                <h3 style={{
+                  fontSize: '1.45rem',
+                  fontFamily: 'var(--font-serif)',
+                  fontWeight: 700,
+                  color: 'var(--black)',
+                  lineHeight: 1.3,
+                  marginBottom: '0.85rem'
+                }}>
+                  Hands-On with Claude Code + Notion: Build Your AI Content System
+                </h3>
 
-              <p style={{ fontSize: '0.975rem', color: '#4B5563', lineHeight: 1.6, marginBottom: '2rem' }}>
-                Learn how to connect Claude Code capabilities with Notion databases to engineer a self-updating content machine.
-              </p>
+                <p style={{ fontSize: '0.975rem', color: '#4B5563', lineHeight: 1.6, marginBottom: '1.5rem' }}>
+                  Learn how to connect Claude Code capabilities with Notion databases to engineer a self-updating content machine.
+                </p>
+              </div>
             </div>
 
-            <a 
-              href="https://luma.com/co-8dzk" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-pill-outline"
-              style={{ justifyContent: 'center', gap: '0.5rem' }}
-            >
-              View on Luma <ArrowUpRight size={16} />
-            </a>
+            {/* Yellow Pill Link Button "View on Luma" */}
+            <div style={{ padding: '0 2rem 2rem 2rem' }}>
+              <a 
+                href="https://luma.com/co-8dzk" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-yellow"
+                style={{ width: '100%', gap: '0.5rem' }}
+              >
+                View on Luma <ArrowUpRight size={16} />
+              </a>
+            </div>
           </div>
 
-          {/* Card 2 */}
+          {/* Workshop Card 2 */}
           <div style={{
             backgroundColor: '#FFFFFF',
-            borderRadius: '20px',
-            padding: '2.5rem',
+            borderRadius: 'var(--radius-card)',
+            overflow: 'hidden',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.05)',
+            border: '1.5px solid rgba(0, 0, 0, 0.08)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            boxShadow: '0 12px 32px rgba(0, 0, 0, 0.15)'
+            height: '100%'
           }}>
             <div>
-              <span style={{
-                display: 'inline-block',
-                backgroundColor: '#FFE600',
-                color: '#000000',
-                fontWeight: 700,
-                fontSize: '0.8rem',
-                padding: '4px 14px',
-                borderRadius: '9999px',
-                marginBottom: '1.25rem'
+              {/* Square Poster Image */}
+              <div style={{
+                width: '100%',
+                aspectRatio: '16/9',
+                backgroundColor: 'var(--ink-blue)',
+                position: 'relative',
+                overflow: 'hidden'
               }}>
-                Product Designers
-              </span>
+                <img 
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" 
+                  alt="Everyday AI Club: Product Designers" 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
+              </div>
 
-              <h3 style={{
-                fontSize: '1.5rem',
-                fontFamily: 'var(--font-sans)',
-                fontWeight: 700,
-                color: '#000000',
-                lineHeight: 1.3,
-                marginBottom: '1rem'
-              }}>
-                Everyday AI Club: Product Designers
-              </h3>
+              {/* Title & Description */}
+              <div style={{ padding: '2rem 2rem 1rem 2rem' }}>
+                <h3 style={{
+                  fontSize: '1.45rem',
+                  fontFamily: 'var(--font-serif)',
+                  fontWeight: 700,
+                  color: 'var(--black)',
+                  lineHeight: 1.3,
+                  marginBottom: '0.85rem'
+                }}>
+                  Everyday AI Club: Product Designers
+                </h3>
 
-              <p style={{ fontSize: '0.975rem', color: '#4B5563', lineHeight: 1.6, marginBottom: '2rem' }}>
-                A monthly masterclass and peer community for product designers integrating AI into research, UI prototyping, and design ops.
-              </p>
+                <p style={{ fontSize: '0.975rem', color: '#4B5563', lineHeight: 1.6, marginBottom: '1.5rem' }}>
+                  A monthly masterclass and peer community for product designers integrating AI into research, UI prototyping, and design ops.
+                </p>
+              </div>
             </div>
 
-            <a 
-              href="https://luma.com/everyday-ai-club-designers?tk=kFhCyd" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-pill-outline"
-              style={{ justifyContent: 'center', gap: '0.5rem' }}
-            >
-              View on Luma <ArrowUpRight size={16} />
-            </a>
+            {/* Yellow Pill Link Button "View on Luma" */}
+            <div style={{ padding: '0 2rem 2rem 2rem' }}>
+              <a 
+                href="https://luma.com/everyday-ai-club-designers?tk=kFhCyd" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-yellow"
+                style={{ width: '100%', gap: '0.5rem' }}
+              >
+                View on Luma <ArrowUpRight size={16} />
+              </a>
+            </div>
           </div>
 
         </div>
 
       </div>
-
-      <style>{`
-        @media (max-width: 860px) {
-          .workshop-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
     </section>
   );
 };

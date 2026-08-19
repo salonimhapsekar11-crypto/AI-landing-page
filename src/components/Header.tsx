@@ -7,7 +7,7 @@ export const Header: React.FC = () => {
   return (
     <header style={{
       backgroundColor: '#FFFFFF',
-      borderBottom: '1px solid rgba(0, 0, 0, 0.06)',
+      borderBottom: '1px solid rgba(0, 0, 0, 0.08)',
       position: 'sticky',
       top: 0,
       zIndex: 100
@@ -16,13 +16,13 @@ export const Header: React.FC = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '1rem 1.5rem'
+        padding: '0.9rem 1.5rem'
       }}>
-        {/* Logo */}
+        {/* Logo Left */}
         <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
           <img 
             src="/assets/logo.png" 
-            alt="Simply Saloni" 
+            alt="Simply Saloni Logo" 
             style={{
               height: '38px',
               width: 'auto',
@@ -31,18 +31,18 @@ export const Header: React.FC = () => {
           />
         </a>
 
-        {/* Desktop Links */}
+        {/* Links & Substack Button */}
         <nav className="desktop-nav" style={{
           display: 'flex',
           alignItems: 'center',
           gap: '2.5rem'
         }}>
           <a 
-            href="#about-me" 
+            href="#about" 
             style={{
               fontWeight: 500,
               fontSize: '0.95rem',
-              color: '#000000'
+              color: 'var(--black)'
             }}
           >
             About me
@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
             style={{
               fontWeight: 500,
               fontSize: '0.95rem',
-              color: '#000000'
+              color: 'var(--black)'
             }}
           >
             Design Services
@@ -65,25 +65,24 @@ export const Header: React.FC = () => {
             rel="noopener noreferrer"
             className="btn-pill-outline"
             style={{
-              fontSize: '0.9rem',
-              padding: '0.55rem 1.35rem'
+              fontSize: '0.9rem'
             }}
           >
             Subscribe on Substack
           </a>
         </nav>
 
-        {/* Mobile menu icon */}
+        {/* Mobile Toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="mobile-toggle"
-          aria-label="Toggle menu"
+          aria-label="Toggle Navigation Menu"
           style={{
             background: 'none',
             border: 'none',
             cursor: 'pointer',
             padding: '0.5rem',
-            color: '#000000',
+            color: 'var(--black)',
             display: 'none'
           }}
         >
@@ -100,8 +99,8 @@ export const Header: React.FC = () => {
           flexDirection: 'column',
           gap: '1.25rem'
         }} className="mobile-menu">
-          <a href="#about-me" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 500, color: '#000000' }}>About me</a>
-          <a href="https://simplysals.framer.website/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 500, color: '#000000' }}>Design Services</a>
+          <a href="#about" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 500, color: 'var(--black)' }}>About me</a>
+          <a href="https://simplysals.framer.website/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 500, color: 'var(--black)' }}>Design Services</a>
           <a href="https://simplysals.substack.com/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="btn-pill-outline" style={{ textAlign: 'center' }}>Subscribe on Substack</a>
         </div>
       )}

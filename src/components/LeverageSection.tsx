@@ -2,41 +2,42 @@ import React from 'react';
 
 export const LeverageSection: React.FC = () => {
   return (
-    <section className="section" style={{ backgroundColor: '#FAF9F5' }}>
+    <section className="section" style={{ backgroundColor: 'var(--bg-offwhite-1)' }}>
       <div className="container">
         
-        {/* Title matching Screenshot 5 */}
+        {/* Centered Heading */}
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
           <h2 style={{
             fontSize: 'clamp(2.2rem, 4vw, 3.2rem)',
             fontFamily: 'var(--font-serif)',
             fontWeight: 700,
-            color: '#0B0836'
+            color: 'var(--ink-blue)'
           }}>
             Choose your leverage point
           </h2>
         </div>
 
-        {/* 3 Pricing Cards Grid matching Screenshot 5 */}
+        {/* 3-Column Card Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '2rem',
           alignItems: 'stretch'
-        }} className="leverage-grid">
+        }}>
           
-          {/* Card 1: Quick Read */}
+          {/* Card 1: Light Outlined Card */}
           <div style={{
             backgroundColor: '#FFFFFF',
-            borderRadius: '20px',
+            borderRadius: 'var(--radius-card)',
             padding: '2.5rem 2rem',
+            border: '1.5px solid rgba(0, 0, 0, 0.1)',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.04)',
-            border: '1px solid rgba(0, 0, 0, 0.06)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            height: '100%'
-          }}>
+            height: '100%',
+            transition: 'transform 0.25s ease'
+          }} className="pricing-card-hover">
             <div>
               <span style={{
                 display: 'inline-block',
@@ -45,7 +46,7 @@ export const LeverageSection: React.FC = () => {
                 fontSize: '0.8rem',
                 fontWeight: 700,
                 padding: '4px 14px',
-                borderRadius: '9999px',
+                borderRadius: 'var(--radius-pill)',
                 marginBottom: '1.25rem'
               }}>
                 Quick Read
@@ -55,7 +56,7 @@ export const LeverageSection: React.FC = () => {
                 fontSize: '1.5rem',
                 fontFamily: 'var(--font-serif)',
                 fontWeight: 700,
-                color: '#0B0836',
+                color: 'var(--ink-blue)',
                 marginBottom: '0.85rem'
               }}>
                 Automation Readiness Audit
@@ -86,7 +87,7 @@ export const LeverageSection: React.FC = () => {
             <div>
               <div style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'baseline', gap: '0.6rem' }}>
                 <span style={{ fontSize: '1.15rem', color: '#9CA3AF', textDecoration: 'line-through' }}>€380</span>
-                <span style={{ fontSize: '2rem', fontWeight: 800, color: '#0B0836', fontFamily: 'var(--font-serif)' }}>€300</span>
+                <span style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--ink-blue)', fontFamily: 'var(--font-serif)' }}>€300</span>
               </div>
 
               <a 
@@ -99,18 +100,19 @@ export const LeverageSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Card 2: Hands-On Build (Dark Card matching Screenshot 5) */}
+          {/* Card 2: Dark Featured Card (Coral CTA) */}
           <div style={{
-            backgroundColor: '#070327',
+            backgroundColor: '#120554',
             color: '#FFFFFF',
-            borderRadius: '20px',
+            borderRadius: 'var(--radius-card)',
             padding: '2.5rem 2rem',
-            boxShadow: '0 16px 40px rgba(7, 3, 39, 0.3)',
+            boxShadow: '0 16px 40px rgba(18, 5, 84, 0.35)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            height: '100%'
-          }}>
+            height: '100%',
+            transition: 'transform 0.25s ease'
+          }} className="pricing-card-hover">
             <div>
               <span style={{
                 display: 'inline-block',
@@ -119,7 +121,7 @@ export const LeverageSection: React.FC = () => {
                 fontSize: '0.8rem',
                 fontWeight: 700,
                 padding: '4px 14px',
-                borderRadius: '9999px',
+                borderRadius: 'var(--radius-pill)',
                 marginBottom: '1.25rem'
               }}>
                 Hands-On Build
@@ -166,7 +168,7 @@ export const LeverageSection: React.FC = () => {
                 href="https://calendly.com/simplysaloni/30min" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn-pill-orange"
+                className="btn-coral"
                 style={{ width: '100%', textAlign: 'center', justifyContent: 'center' }}
               >
                 Start with a Discovery Call
@@ -174,18 +176,19 @@ export const LeverageSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Card 3: Ongoing Build */}
+          {/* Card 3: Light Outlined Card */}
           <div style={{
             backgroundColor: '#FFFFFF',
-            borderRadius: '20px',
+            borderRadius: 'var(--radius-card)',
             padding: '2.5rem 2rem',
+            border: '1.5px solid rgba(0, 0, 0, 0.1)',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.04)',
-            border: '1px solid rgba(0, 0, 0, 0.06)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            height: '100%'
-          }}>
+            height: '100%',
+            transition: 'transform 0.25s ease'
+          }} className="pricing-card-hover">
             <div>
               <span style={{
                 display: 'inline-block',
@@ -194,7 +197,7 @@ export const LeverageSection: React.FC = () => {
                 fontSize: '0.8rem',
                 fontWeight: 700,
                 padding: '4px 14px',
-                borderRadius: '9999px',
+                borderRadius: 'var(--radius-pill)',
                 marginBottom: '1.25rem'
               }}>
                 Ongoing Build
@@ -204,7 +207,7 @@ export const LeverageSection: React.FC = () => {
                 fontSize: '1.5rem',
                 fontFamily: 'var(--font-serif)',
                 fontWeight: 700,
-                color: '#0B0836',
+                color: 'var(--ink-blue)',
                 marginBottom: '0.85rem'
               }}>
                 Systems That Know Your Work
@@ -254,10 +257,8 @@ export const LeverageSection: React.FC = () => {
       </div>
 
       <style>{`
-        @media (max-width: 900px) {
-          .leverage-grid {
-            grid-template-columns: 1fr !important;
-          }
+        .pricing-card-hover:hover {
+          transform: translateY(-4px);
         }
       `}</style>
     </section>

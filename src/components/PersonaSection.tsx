@@ -2,37 +2,37 @@ import React from 'react';
 
 export const PersonaSection: React.FC = () => {
   return (
-    <section className="section" style={{ backgroundColor: '#FAF9F5' }}>
+    <section className="section" style={{ backgroundColor: 'var(--bg-offwhite-1)' }}>
       <div className="container">
         
-        {/* Title */}
+        {/* Centered Heading */}
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
           <h2 style={{
             fontSize: 'clamp(2.2rem, 4vw, 3.2rem)',
             fontFamily: 'var(--font-serif)',
             fontWeight: 700,
-            color: '#000000'
+            color: 'var(--black)'
           }}>
             What describes you better?
           </h2>
         </div>
 
-        {/* Side-by-side Cards matching Screenshot 2 */}
+        {/* Side-by-Side Cards Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '2.5rem',
           alignItems: 'stretch'
-        }} className="persona-grid">
+        }}>
           
-          {/* Card 1 */}
+          {/* Card 1: Target Solo/Freelance */}
           <div className="card-hard-shadow">
             <div>
               <h3 style={{
-                fontSize: '1.6rem',
+                fontSize: '1.65rem',
                 fontFamily: 'var(--font-sans)',
                 fontWeight: 700,
-                color: '#000000',
+                color: 'var(--black)',
                 lineHeight: 1.3,
                 marginBottom: '1.25rem'
               }}>
@@ -57,7 +57,7 @@ export const PersonaSection: React.FC = () => {
                 gap: '1.1rem',
                 fontSize: '0.975rem',
                 fontWeight: 600,
-                color: '#000000'
+                color: 'var(--black)'
               }}>
                 <li style={{ display: 'flex', gap: '0.6rem' }}>
                   <span>→</span>
@@ -75,14 +75,14 @@ export const PersonaSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Card 2 */}
+          {/* Card 2: Target Product Teams */}
           <div className="card-hard-shadow">
             <div>
               <h3 style={{
-                fontSize: '1.6rem',
+                fontSize: '1.65rem',
                 fontFamily: 'var(--font-sans)',
                 fontWeight: 700,
-                color: '#000000',
+                color: 'var(--black)',
                 lineHeight: 1.3,
                 marginBottom: '1.25rem'
               }}>
@@ -107,7 +107,7 @@ export const PersonaSection: React.FC = () => {
                 gap: '1.1rem',
                 fontSize: '0.975rem',
                 fontWeight: 600,
-                color: '#000000'
+                color: 'var(--black)'
               }}>
                 <li style={{ display: 'flex', gap: '0.6rem' }}>
                   <span>→</span>
@@ -128,14 +128,6 @@ export const PersonaSection: React.FC = () => {
         </div>
 
       </div>
-
-      <style>{`
-        @media (max-width: 860px) {
-          .persona-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
     </section>
   );
 };

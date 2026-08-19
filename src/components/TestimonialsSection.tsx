@@ -2,10 +2,13 @@ import React from 'react';
 
 export const TestimonialsSection: React.FC = () => {
   return (
-    <section className="section" style={{ backgroundColor: '#160DBA' }}>
+    <section className="section" style={{
+      background: 'linear-gradient(180deg, var(--ink-blue) 0%, var(--ink-blue-dark) 100%)',
+      color: '#FFFFFF'
+    }}>
       <div className="container">
         
-        {/* Title */}
+        {/* Centered White Heading */}
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
           <h2 style={{
             fontSize: 'clamp(2.2rem, 4vw, 3.2rem)',
@@ -17,35 +20,37 @@ export const TestimonialsSection: React.FC = () => {
           </h2>
         </div>
 
-        {/* Testimonial Cards Grid matching Screenshot 4 */}
+        {/* Two White Cards Styled Like Mini Browser Windows */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '2.5rem',
           alignItems: 'stretch'
-        }} className="testimonial-grid">
+        }}>
           
-          {/* Card 1 */}
+          {/* Browser Window Card 1 */}
           <div style={{
             backgroundColor: '#FFFFFF',
-            borderRadius: '20px',
+            borderRadius: 'var(--radius-card)',
             padding: '2.25rem',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            boxShadow: '0 12px 32px rgba(0, 0, 0, 0.15)'
-          }}>
+            boxShadow: '0 12px 36px rgba(0, 0, 0, 0.2)',
+            transition: 'transform 0.25s ease'
+          }} className="browser-card-hover">
             <div>
-              {/* Window Dots 🔴 🟡 🟢 */}
+              {/* Traffic-Light Dots */}
               <div className="window-dots">
                 <span className="dot dot-red" />
                 <span className="dot dot-yellow" />
                 <span className="dot dot-green" />
               </div>
 
+              {/* Quote Text with Yellow Highlighted Stat Callouts */}
               <p style={{
                 fontSize: '1.05rem',
-                color: '#000000',
+                color: 'var(--black)',
                 lineHeight: 1.65,
                 fontWeight: 500,
                 marginBottom: '2rem'
@@ -54,52 +59,54 @@ export const TestimonialsSection: React.FC = () => {
               </p>
             </div>
 
-            {/* Bottom Yellow Tags */}
+            {/* Role / Industry Tag Pills */}
             <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
               <span style={{
-                backgroundColor: '#FFE600',
-                color: '#000000',
+                backgroundColor: 'var(--yellow-cta)',
+                color: 'var(--black)',
                 fontWeight: 700,
                 fontSize: '0.85rem',
-                padding: '6px 16px',
-                borderRadius: '9999px'
+                padding: '5px 16px',
+                borderRadius: 'var(--radius-pill)'
               }}>
                 Product Designer
               </span>
               <span style={{
-                backgroundColor: '#FFE600',
-                color: '#000000',
+                backgroundColor: 'var(--yellow-cta)',
+                color: 'var(--black)',
                 fontWeight: 700,
                 fontSize: '0.85rem',
-                padding: '6px 16px',
-                borderRadius: '9999px'
+                padding: '5px 16px',
+                borderRadius: 'var(--radius-pill)'
               }}>
                 B2B SaaS
               </span>
             </div>
           </div>
 
-          {/* Card 2 */}
+          {/* Browser Window Card 2 */}
           <div style={{
             backgroundColor: '#FFFFFF',
-            borderRadius: '20px',
+            borderRadius: 'var(--radius-card)',
             padding: '2.25rem',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            boxShadow: '0 12px 32px rgba(0, 0, 0, 0.15)'
-          }}>
+            boxShadow: '0 12px 36px rgba(0, 0, 0, 0.2)',
+            transition: 'transform 0.25s ease'
+          }} className="browser-card-hover">
             <div>
-              {/* Window Dots 🔴 🟡 🟢 */}
+              {/* Traffic-Light Dots */}
               <div className="window-dots">
                 <span className="dot dot-red" />
                 <span className="dot dot-yellow" />
                 <span className="dot dot-green" />
               </div>
 
+              {/* Quote Text with Yellow Highlighted Stat Callouts */}
               <p style={{
                 fontSize: '1.05rem',
-                color: '#000000',
+                color: 'var(--black)',
                 lineHeight: 1.65,
                 fontWeight: 500,
                 marginBottom: '2rem'
@@ -108,25 +115,25 @@ export const TestimonialsSection: React.FC = () => {
               </p>
             </div>
 
-            {/* Bottom Yellow Tags */}
+            {/* Role / Industry Tag Pills */}
             <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
               <span style={{
-                backgroundColor: '#FFE600',
-                color: '#000000',
+                backgroundColor: 'var(--yellow-cta)',
+                color: 'var(--black)',
                 fontWeight: 700,
                 fontSize: '0.85rem',
-                padding: '6px 16px',
-                borderRadius: '9999px'
+                padding: '5px 16px',
+                borderRadius: 'var(--radius-pill)'
               }}>
                 Marketer
               </span>
               <span style={{
-                backgroundColor: '#FFE600',
-                color: '#000000',
+                backgroundColor: 'var(--yellow-cta)',
+                color: 'var(--black)',
                 fontWeight: 700,
                 fontSize: '0.85rem',
-                padding: '6px 16px',
-                borderRadius: '9999px'
+                padding: '5px 16px',
+                borderRadius: 'var(--radius-pill)'
               }}>
                 Digital Agency
               </span>
@@ -138,10 +145,8 @@ export const TestimonialsSection: React.FC = () => {
       </div>
 
       <style>{`
-        @media (max-width: 860px) {
-          .testimonial-grid {
-            grid-template-columns: 1fr !important;
-          }
+        .browser-card-hover:hover {
+          transform: translateY(-4px);
         }
       `}</style>
     </section>

@@ -5,18 +5,9 @@ export const HeroSection: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section style={{
-      backgroundColor: '#160DBA',
-      backgroundImage: `
-        radial-gradient(circle at 80% 20%, rgba(67, 56, 202, 0.6) 0%, rgba(22, 13, 186, 1) 70%),
-        url('/assets/bg-hero.png')
-      `,
-      backgroundBlendMode: 'screen, normal',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      color: '#FFFFFF',
-      padding: '5rem 1.5rem 6rem 1.5rem',
-      minHeight: '80vh',
+    <section className="bg-textured-dark" style={{
+      padding: '5.5rem 1.5rem 6.5rem 1.5rem',
+      minHeight: '82vh',
       display: 'flex',
       alignItems: 'center'
     }}>
@@ -30,7 +21,7 @@ export const HeroSection: React.FC = () => {
         {/* Left Column */}
         <div style={{ maxWidth: '540px' }}>
           <h1 style={{
-            fontSize: 'clamp(2.75rem, 5vw, 4rem)',
+            fontSize: 'clamp(2.75rem, 5.2vw, 4rem)',
             fontFamily: 'var(--font-serif)',
             fontWeight: 700,
             color: '#FFFFFF',
@@ -42,7 +33,7 @@ export const HeroSection: React.FC = () => {
 
           <p style={{
             fontSize: '1.15rem',
-            color: 'rgba(255, 255, 255, 0.9)',
+            color: 'rgba(255, 255, 255, 0.95)',
             lineHeight: 1.6,
             marginBottom: '2.5rem',
             fontFamily: 'var(--font-sans)',
@@ -55,29 +46,31 @@ export const HeroSection: React.FC = () => {
             href="https://calendly.com/simplysaloni/30min" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="btn-pill-white"
+            className="btn-yellow"
             style={{
-              padding: '0.9rem 2.25rem',
-              fontSize: '1rem'
+              fontSize: '1.05rem',
+              padding: '0.95rem 2.25rem'
             }}
           >
             Book a Discovery Call
           </a>
         </div>
 
-        {/* Right Column: Workshop Presentation Video Player */}
+        {/* Right Column: Tilted (-2deg) Workshop Video Card */}
         <div style={{
           position: 'relative',
           width: '100%',
-          maxWidth: '460px',
+          maxWidth: '440px',
           margin: '0 auto',
+          transform: 'rotate(-2deg)',
           borderRadius: '24px',
           overflow: 'hidden',
-          boxShadow: '0 20px 50px rgba(0, 0, 0, 0.4)',
-          border: '2px solid rgba(255, 255, 255, 0.2)',
-          backgroundColor: '#0F0B38',
-          aspectRatio: '3/4'
-        }}>
+          boxShadow: '0 25px 50px rgba(0, 0, 0, 0.5)',
+          border: '2.5px solid rgba(255, 255, 255, 0.25)',
+          backgroundColor: '#120554',
+          aspectRatio: '3/4',
+          transition: 'transform 0.3s ease'
+        }} className="hero-tilted-card">
           {!isPlaying ? (
             <div 
               onClick={() => setIsPlaying(true)}
@@ -94,29 +87,29 @@ export const HeroSection: React.FC = () => {
                 justifyContent: 'center'
               }}
             >
-              {/* Overlay */}
+              {/* Dark Overlay */}
               <div style={{
                 position: 'absolute',
                 inset: 0,
-                backgroundColor: 'rgba(0, 0, 0, 0.25)'
+                backgroundColor: 'rgba(0, 0, 0, 0.2)'
               }} />
 
-              {/* Play Icon Circle matching screenshot 1 */}
+              {/* White Play Button Overlay */}
               <div style={{
                 position: 'relative',
                 zIndex: 2,
-                width: '68px',
-                height: '68px',
+                width: '72px',
+                height: '72px',
                 borderRadius: '50%',
                 backgroundColor: '#FFFFFF',
-                color: '#160DBA',
+                color: 'var(--ink-blue)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                boxShadow: '0 8px 30px rgba(0,0,0,0.3)',
+                boxShadow: '0 8px 30px rgba(0,0,0,0.35)',
                 transition: 'transform 0.2s ease'
-              }} className="play-icon-pulse">
-                <Play size={28} style={{ marginLeft: '4px' }} fill="#160DBA" />
+              }} className="play-button-hover">
+                <Play size={32} style={{ marginLeft: '4px' }} fill="var(--ink-blue)" />
               </div>
             </div>
           ) : (
@@ -163,13 +156,18 @@ export const HeroSection: React.FC = () => {
         @media (max-width: 900px) {
           .hero-grid {
             grid-template-columns: 1fr !important;
-            gap: 3rem !important;
+            gap: 3.5rem !important;
             text-align: center;
           }
-          .hero-grid div { margin: 0 auto; }
+          .hero-tilted-card {
+            transform: rotate(0deg) !important;
+          }
         }
-        .play-icon-pulse:hover {
-          transform: scale(1.08);
+        .hero-tilted-card:hover {
+          transform: rotate(0deg) scale(1.02);
+        }
+        .play-button-hover:hover {
+          transform: scale(1.1);
         }
       `}</style>
     </section>
