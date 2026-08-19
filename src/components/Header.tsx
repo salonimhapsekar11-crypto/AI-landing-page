@@ -1,52 +1,48 @@
 import React, { useState } from 'react';
-import { Menu, X, ArrowUpRight, Calendar } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header style={{
+      backgroundColor: '#FFFFFF',
+      borderBottom: '1px solid rgba(0, 0, 0, 0.06)',
       position: 'sticky',
       top: 0,
-      zIndex: 100,
-      backgroundColor: 'rgba(250, 249, 245, 0.9)',
-      backdropFilter: 'blur(12px)',
-      borderBottom: '1px solid var(--border-light)',
-      transition: 'all 0.3s ease'
+      zIndex: 100
     }}>
       <div className="container" style={{
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '0.85rem 1.5rem'
+        padding: '1rem 1.5rem'
       }}>
-        {/* Scaled Logo */}
+        {/* Logo */}
         <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
           <img 
             src="/assets/logo.png" 
-            alt="Simply Saloni Logo" 
+            alt="Simply Saloni" 
             style={{
-              height: '42px',
+              height: '38px',
               width: 'auto',
-              maxHeight: '42px',
-              objectFit: 'contain',
-              display: 'block'
+              objectFit: 'contain'
             }}
           />
         </a>
 
-        {/* Desktop Navigation */}
-        <nav style={{
+        {/* Desktop Links */}
+        <nav className="desktop-nav" style={{
           display: 'flex',
           alignItems: 'center',
-          gap: '2rem'
-        }} className="desktop-nav">
+          gap: '2.5rem'
+        }}>
           <a 
             href="#about-me" 
             style={{
               fontWeight: 500,
               fontSize: '0.95rem',
-              color: 'var(--text-main)'
+              color: '#000000'
             }}
           >
             About me
@@ -58,54 +54,36 @@ export const Header: React.FC = () => {
             style={{
               fontWeight: 500,
               fontSize: '0.95rem',
-              color: 'var(--text-main)',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.25rem'
+              color: '#000000'
             }}
           >
-            Design Services <ArrowUpRight size={15} style={{ opacity: 0.7 }} />
+            Design Services
           </a>
           <a 
             href="https://simplysals.substack.com/" 
             target="_blank" 
             rel="noopener noreferrer"
-            style={{
-              fontWeight: 500,
-              fontSize: '0.95rem',
-              color: 'var(--text-main)',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.25rem'
-            }}
-          >
-            Subscribe on Substack <ArrowUpRight size={15} style={{ opacity: 0.7 }} />
-          </a>
-          <a 
-            href="https://calendly.com/simplysaloni/30min" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="btn btn-primary"
+            className="btn-pill-outline"
             style={{
               fontSize: '0.9rem',
-              padding: '0.6rem 1.25rem'
+              padding: '0.55rem 1.35rem'
             }}
           >
-            <Calendar size={16} /> Book discovery
+            Subscribe on Substack
           </a>
         </nav>
 
-        {/* Mobile Hamburger Toggle */}
+        {/* Mobile menu icon */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="mobile-toggle"
-          aria-label="Toggle Navigation Menu"
+          aria-label="Toggle menu"
           style={{
             background: 'none',
             border: 'none',
             cursor: 'pointer',
             padding: '0.5rem',
-            color: 'var(--text-main)',
+            color: '#000000',
             display: 'none'
           }}
         >
@@ -113,56 +91,23 @@ export const Header: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
         <div style={{
-          backgroundColor: 'var(--bg-page)',
-          borderBottom: '1px solid var(--border-light)',
+          backgroundColor: '#FFFFFF',
           padding: '1.5rem',
+          borderBottom: '1px solid #E5E7EB',
           display: 'flex',
           flexDirection: 'column',
           gap: '1.25rem'
         }} className="mobile-menu">
-          <a 
-            href="#about-me" 
-            onClick={() => setMobileMenuOpen(false)}
-            style={{ fontWeight: 500, fontSize: '1.05rem', color: 'var(--text-main)' }}
-          >
-            About me
-          </a>
-          <a 
-            href="https://simplysals.framer.website/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            onClick={() => setMobileMenuOpen(false)}
-            style={{ fontWeight: 500, fontSize: '1.05rem', color: 'var(--text-main)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
-          >
-            Design Services <ArrowUpRight size={18} />
-          </a>
-          <a 
-            href="https://simplysals.substack.com/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            onClick={() => setMobileMenuOpen(false)}
-            style={{ fontWeight: 500, fontSize: '1.05rem', color: 'var(--text-main)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
-          >
-            Subscribe on Substack <ArrowUpRight size={18} />
-          </a>
-          <a 
-            href="https://calendly.com/simplysaloni/30min" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            onClick={() => setMobileMenuOpen(false)}
-            className="btn btn-blue"
-            style={{ width: '100%', marginTop: '0.5rem' }}
-          >
-            <Calendar size={18} /> Book Discovery Call
-          </a>
+          <a href="#about-me" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 500, color: '#000000' }}>About me</a>
+          <a href="https://simplysals.framer.website/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 500, color: '#000000' }}>Design Services</a>
+          <a href="https://simplysals.substack.com/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="btn-pill-outline" style={{ textAlign: 'center' }}>Subscribe on Substack</a>
         </div>
       )}
 
       <style>{`
-        @media (max-width: 868px) {
+        @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-toggle { display: block !important; }
         }

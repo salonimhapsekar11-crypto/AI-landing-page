@@ -1,229 +1,248 @@
 import React from 'react';
-import { Check, Calendar, ArrowRight, Sparkles } from 'lucide-react';
 
 export const LeverageSection: React.FC = () => {
   return (
-    <section className="section" style={{ backgroundColor: '#F8F6F0' }}>
+    <section className="section" style={{ backgroundColor: '#FAF9F5' }}>
       <div className="container">
         
-        <div style={{ textAlign: 'center', maxWidth: '680px', margin: '0 auto 3.5rem auto' }}>
-          <span className="badge badge-gold" style={{ marginBottom: '0.85rem' }}>
-            Structured Offerings
-          </span>
-          <h2>Choose your leverage point</h2>
-          <p>
-            From quick diagnostic audits to end-to-end custom AI system design for teams.
-          </p>
+        {/* Title matching Screenshot 5 */}
+        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+          <h2 style={{
+            fontSize: 'clamp(2.2rem, 4vw, 3.2rem)',
+            fontFamily: 'var(--font-serif)',
+            fontWeight: 700,
+            color: '#0B0836'
+          }}>
+            Choose your leverage point
+          </h2>
         </div>
 
-        <div className="grid-3" style={{ alignItems: 'stretch' }}>
+        {/* 3 Pricing Cards Grid matching Screenshot 5 */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: '2rem',
+          alignItems: 'stretch'
+        }} className="leverage-grid">
           
-          {/* Tier 1: Quick Read */}
-          <div className="card-equal-height" style={{
+          {/* Card 1: Quick Read */}
+          <div style={{
             backgroundColor: '#FFFFFF',
-            borderRadius: 'var(--radius-xl)',
+            borderRadius: '20px',
             padding: '2.5rem 2rem',
-            border: '1px solid var(--border-light)',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            height: '100%',
-            position: 'relative'
-          }}>
-            <div>
-              <div style={{
-                fontSize: '0.85rem',
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                color: 'var(--text-muted)',
-                marginBottom: '0.5rem'
-              }}>
-                Quick Read
-              </div>
-
-              <h3 style={{ fontSize: '1.45rem', marginBottom: '0.85rem', color: 'var(--text-main)' }}>
-                Automation Readiness Audit
-              </h3>
-
-              <p style={{ fontSize: '0.975rem', color: 'var(--text-muted)', lineHeight: 1.6, marginBottom: '1.75rem' }}>
-                Most AI advice misses your context. I map what to automate, what to skip, and hand you resources built for your case.
-              </p>
-
-              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', fontSize: '0.925rem', color: 'var(--text-main)' }}>
-                  <Check size={16} style={{ color: 'var(--accent-blue)', marginTop: '3px', flexShrink: 0 }} />
-                  <span>Walkthrough of your current process</span>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', fontSize: '0.925rem', color: 'var(--text-main)' }}>
-                  <Check size={16} style={{ color: 'var(--accent-blue)', marginTop: '3px', flexShrink: 0 }} />
-                  <span>What to automate, what to keep human</span>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', fontSize: '0.925rem', color: 'var(--text-main)' }}>
-                  <Check size={16} style={{ color: 'var(--accent-blue)', marginTop: '3px', flexShrink: 0 }} />
-                  <span>Resources picked for your specific case</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <div style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'baseline', gap: '0.75rem' }}>
-                <span style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--text-main)' }}>€300</span>
-                <span style={{ fontSize: '1.2rem', textDecoration: 'line-through', color: '#9CA3AF' }}>€380</span>
-              </div>
-              <a 
-                href="#audit-section" 
-                className="btn btn-outline"
-                style={{ width: '100%' }}
-              >
-                Learn more <ArrowRight size={16} />
-              </a>
-            </div>
-          </div>
-
-          {/* Tier 2: Hands-On Build (Featured Card) */}
-          <div className="card-equal-height" style={{
-            backgroundColor: '#0B0F19',
-            color: '#FFFFFF',
-            borderRadius: 'var(--radius-xl)',
-            padding: '2.5rem 2rem',
-            border: '2px solid var(--accent-blue)',
-            boxShadow: '0 20px 40px rgba(37, 99, 235, 0.25)',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            height: '100%',
-            position: 'relative'
-          }}>
-            <div style={{
-              position: 'absolute',
-              top: '-14px',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              backgroundColor: 'var(--accent-blue)',
-              color: '#FFFFFF',
-              padding: '0.25rem 1rem',
-              borderRadius: '9999px',
-              fontSize: '0.75rem',
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              letterSpacing: '0.06em',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.35rem'
-            }}>
-              <Sparkles size={12} /> Most Popular
-            </div>
-
-            <div>
-              <div style={{
-                fontSize: '0.85rem',
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                color: '#93C5FD',
-                marginBottom: '0.5rem'
-              }}>
-                Hands-On Build
-              </div>
-
-              <h3 style={{ fontSize: '1.45rem', marginBottom: '0.85rem', color: '#FFFFFF' }}>
-                Build Your Second Brain
-              </h3>
-
-              <p style={{ fontSize: '0.975rem', color: '#9CA3AF', lineHeight: 1.6, marginBottom: '1.75rem' }}>
-                Move from AI-curious to AI-capable in one session, built together.
-              </p>
-
-              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', fontSize: '0.925rem', color: '#F3F4F6' }}>
-                  <Check size={16} style={{ color: '#60A5FA', marginTop: '3px', flexShrink: 0 }} />
-                  <span>Group session, cohort, or 1:1</span>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', fontSize: '0.925rem', color: '#F3F4F6' }}>
-                  <Check size={16} style={{ color: '#60A5FA', marginTop: '3px', flexShrink: 0 }} />
-                  <span>Live, custom skill built together</span>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', fontSize: '0.925rem', color: '#F3F4F6' }}>
-                  <Check size={16} style={{ color: '#60A5FA', marginTop: '3px', flexShrink: 0 }} />
-                  <span>Follow-up materials and ongoing support</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <div style={{ fontSize: '0.9rem', color: '#D1D5DB', marginBottom: '1.25rem', fontStyle: 'italic' }}>
-                Customized to your team or cohort.
-              </div>
-              <a 
-                href="https://calendly.com/simplysaloni/30min" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn btn-blue"
-                style={{ width: '100%' }}
-              >
-                <Calendar size={16} /> Start with a Discovery Call
-              </a>
-            </div>
-          </div>
-
-          {/* Tier 3: Ongoing Build */}
-          <div className="card-equal-height" style={{
-            backgroundColor: '#FFFFFF',
-            borderRadius: 'var(--radius-xl)',
-            padding: '2.5rem 2rem',
-            border: '1px solid var(--border-light)',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.04)',
+            border: '1px solid rgba(0, 0, 0, 0.06)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
             height: '100%'
           }}>
             <div>
-              <div style={{
-                fontSize: '0.85rem',
+              <span style={{
+                display: 'inline-block',
+                backgroundColor: '#ECE7FE',
+                color: '#4F46E5',
+                fontSize: '0.8rem',
                 fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                color: 'var(--text-muted)',
-                marginBottom: '0.5rem'
+                padding: '4px 14px',
+                borderRadius: '9999px',
+                marginBottom: '1.25rem'
               }}>
-                Ongoing Build
-              </div>
+                Quick Read
+              </span>
 
-              <h3 style={{ fontSize: '1.45rem', marginBottom: '0.85rem', color: 'var(--text-main)' }}>
-                Systems That Know Your Work
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontFamily: 'var(--font-serif)',
+                fontWeight: 700,
+                color: '#0B0836',
+                marginBottom: '0.85rem'
+              }}>
+                Automation Readiness Audit
               </h3>
 
-              <p style={{ fontSize: '0.975rem', color: 'var(--text-muted)', lineHeight: 1.6, marginBottom: '1.75rem' }}>
-                Documentation and connections so your tools understand how your team works.
+              <p style={{
+                fontSize: '0.95rem',
+                color: '#6B7280',
+                lineHeight: 1.6,
+                marginBottom: '1.75rem'
+              }}>
+                Most AI advice misses your context. I map what to automate, what to skip, and hand you resources built for your case.
               </p>
 
-              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', fontSize: '0.925rem', color: 'var(--text-main)' }}>
-                  <Check size={16} style={{ color: 'var(--accent-blue)', marginTop: '3px', flexShrink: 0 }} />
-                  <span>1:1 or team sessions</span>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', fontSize: '0.925rem', color: 'var(--text-main)' }}>
-                  <Check size={16} style={{ color: 'var(--accent-blue)', marginTop: '3px', flexShrink: 0 }} />
-                  <span>Custom system & design work where useful</span>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', fontSize: '0.925rem', color: 'var(--text-main)' }}>
-                  <Check size={16} style={{ color: 'var(--accent-blue)', marginTop: '3px', flexShrink: 0 }} />
-                  <span>Ongoing refinement and optimization</span>
-                </li>
-              </ul>
+              <div style={{ margin: '0 0 2rem 0' }}>
+                <div style={{ borderBottom: '1px solid #E5E7EB', padding: '10px 0', fontSize: '0.925rem', color: '#1F2937', fontWeight: 500 }}>
+                  Walkthrough of your current process
+                </div>
+                <div style={{ borderBottom: '1px solid #E5E7EB', padding: '10px 0', fontSize: '0.925rem', color: '#1F2937', fontWeight: 500 }}>
+                  What to automate, what to keep human
+                </div>
+                <div style={{ padding: '10px 0', fontSize: '0.925rem', color: '#1F2937', fontWeight: 500 }}>
+                  Resources picked for your specific case
+                </div>
+              </div>
             </div>
 
             <div>
-              <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '1.25rem', fontStyle: 'italic' }}>
-                Scoped to your team, priced after a call.
+              <div style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'baseline', gap: '0.6rem' }}>
+                <span style={{ fontSize: '1.15rem', color: '#9CA3AF', textDecoration: 'line-through' }}>€380</span>
+                <span style={{ fontSize: '2rem', fontWeight: 800, color: '#0B0836', fontFamily: 'var(--font-serif)' }}>€300</span>
               </div>
+
+              <a 
+                href="#audit-section" 
+                className="btn-pill-outline"
+                style={{ width: '100%', textAlign: 'center', justifyContent: 'center' }}
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+
+          {/* Card 2: Hands-On Build (Dark Card matching Screenshot 5) */}
+          <div style={{
+            backgroundColor: '#070327',
+            color: '#FFFFFF',
+            borderRadius: '20px',
+            padding: '2.5rem 2rem',
+            boxShadow: '0 16px 40px rgba(7, 3, 39, 0.3)',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            height: '100%'
+          }}>
+            <div>
+              <span style={{
+                display: 'inline-block',
+                backgroundColor: '#4C0519',
+                color: '#F43F5E',
+                fontSize: '0.8rem',
+                fontWeight: 700,
+                padding: '4px 14px',
+                borderRadius: '9999px',
+                marginBottom: '1.25rem'
+              }}>
+                Hands-On Build
+              </span>
+
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontFamily: 'var(--font-serif)',
+                fontWeight: 700,
+                color: '#FFFFFF',
+                marginBottom: '0.85rem'
+              }}>
+                Build Your Second Brain
+              </h3>
+
+              <p style={{
+                fontSize: '0.95rem',
+                color: '#D1D5DB',
+                lineHeight: 1.6,
+                marginBottom: '1.75rem'
+              }}>
+                Move from AI-curious to AI-capable in one session, built together.
+              </p>
+
+              <div style={{ margin: '0 0 2rem 0' }}>
+                <div style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.12)', padding: '10px 0', fontSize: '0.925rem', color: '#F9FAFB', fontWeight: 500 }}>
+                  Group session, cohort, or 1:1
+                </div>
+                <div style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.12)', padding: '10px 0', fontSize: '0.925rem', color: '#F9FAFB', fontWeight: 500 }}>
+                  Live, custom skill built together
+                </div>
+                <div style={{ padding: '10px 0', fontSize: '0.925rem', color: '#F9FAFB', fontWeight: 500 }}>
+                  Follow-up materials and support
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div style={{ fontSize: '0.9rem', color: '#9CA3AF', marginBottom: '1.25rem' }}>
+                Customized to your team or cohort.
+              </div>
+
               <a 
                 href="https://calendly.com/simplysaloni/30min" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn btn-outline"
-                style={{ width: '100%' }}
+                className="btn-pill-orange"
+                style={{ width: '100%', textAlign: 'center', justifyContent: 'center' }}
+              >
+                Start with a Discovery Call
+              </a>
+            </div>
+          </div>
+
+          {/* Card 3: Ongoing Build */}
+          <div style={{
+            backgroundColor: '#FFFFFF',
+            borderRadius: '20px',
+            padding: '2.5rem 2rem',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.04)',
+            border: '1px solid rgba(0, 0, 0, 0.06)',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            height: '100%'
+          }}>
+            <div>
+              <span style={{
+                display: 'inline-block',
+                backgroundColor: '#ECE7FE',
+                color: '#4F46E5',
+                fontSize: '0.8rem',
+                fontWeight: 700,
+                padding: '4px 14px',
+                borderRadius: '9999px',
+                marginBottom: '1.25rem'
+              }}>
+                Ongoing Build
+              </span>
+
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontFamily: 'var(--font-serif)',
+                fontWeight: 700,
+                color: '#0B0836',
+                marginBottom: '0.85rem'
+              }}>
+                Systems That Know Your Work
+              </h3>
+
+              <p style={{
+                fontSize: '0.95rem',
+                color: '#6B7280',
+                lineHeight: 1.6,
+                marginBottom: '1.75rem'
+              }}>
+                Documentation and connections so your tools understand how your team works.
+              </p>
+
+              <div style={{ margin: '0 0 2rem 0' }}>
+                <div style={{ borderBottom: '1px solid #E5E7EB', padding: '10px 0', fontSize: '0.925rem', color: '#1F2937', fontWeight: 500 }}>
+                  1:1 or team sessions
+                </div>
+                <div style={{ borderBottom: '1px solid #E5E7EB', padding: '10px 0', fontSize: '0.925rem', color: '#1F2937', fontWeight: 500 }}>
+                  Custom system, and design work where it's useful
+                </div>
+                <div style={{ padding: '10px 0', fontSize: '0.925rem', color: '#1F2937', fontWeight: 500 }}>
+                  Ongoing refinement
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div style={{ fontSize: '0.9rem', color: '#6B7280', marginBottom: '1.25rem' }}>
+                Scoped to your team, priced after a call.
+              </div>
+
+              <a 
+                href="https://calendly.com/simplysaloni/30min" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-pill-outline"
+                style={{ width: '100%', textAlign: 'center', justifyContent: 'center' }}
               >
                 Get custom quote
               </a>
@@ -233,6 +252,14 @@ export const LeverageSection: React.FC = () => {
         </div>
 
       </div>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .leverage-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   );
 };
