@@ -6,9 +6,9 @@ export const LeverageSection: React.FC = () => {
       <div className="container">
         
         {/* Centered Heading */}
-        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+        <div style={{ textAlign: 'left', marginBottom: '1.75rem' }}>
           <h2 style={{
-            fontSize: 'clamp(2.2rem, 4vw, 3.2rem)',
+            fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
             fontFamily: 'var(--font-serif)',
             fontWeight: 700,
             color: 'var(--ink-blue)'
@@ -29,13 +29,12 @@ export const LeverageSection: React.FC = () => {
           <div style={{
             backgroundColor: '#FFFFFF',
             borderRadius: 'var(--radius-card)',
-            padding: '2.5rem 2rem',
+            padding: '1.25rem',
             border: '1.5px solid rgba(0, 0, 0, 0.1)',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.04)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            height: '100%',
             transition: 'transform 0.25s ease'
           }} className="pricing-card-hover">
             <div>
@@ -47,7 +46,7 @@ export const LeverageSection: React.FC = () => {
                 fontWeight: 700,
                 padding: '4px 14px',
                 borderRadius: 'var(--radius-pill)',
-                marginBottom: '1.25rem'
+                marginBottom: '1rem'
               }}>
                 Quick Read
               </span>
@@ -63,31 +62,31 @@ export const LeverageSection: React.FC = () => {
               </h3>
 
               <p style={{
-                fontSize: '0.95rem',
+                fontSize: '0.9rem',
                 color: '#6B7280',
-                lineHeight: 1.6,
-                marginBottom: '1.75rem'
+                lineHeight: 1.5,
+                marginBottom: '1rem'
               }}>
                 Most AI advice misses your context. I map what to automate, what to skip, and hand you resources built for your case.
               </p>
 
-              <div style={{ margin: '0 0 2rem 0' }}>
-                <div style={{ borderBottom: '1px solid #E5E7EB', padding: '10px 0', fontSize: '0.925rem', color: '#1F2937', fontWeight: 500 }}>
+              <div style={{ margin: '0 0 1.5rem 0' }}>
+                <div style={{ borderBottom: '1px solid #E5E7EB', padding: '8px 0', fontSize: '0.9rem', color: '#1F2937', fontWeight: 500 }}>
                   Walkthrough of your current process
                 </div>
-                <div style={{ borderBottom: '1px solid #E5E7EB', padding: '10px 0', fontSize: '0.925rem', color: '#1F2937', fontWeight: 500 }}>
+                <div style={{ borderBottom: '1px solid #E5E7EB', padding: '8px 0', fontSize: '0.9rem', color: '#1F2937', fontWeight: 500 }}>
                   What to automate, what to keep human
                 </div>
-                <div style={{ padding: '10px 0', fontSize: '0.925rem', color: '#1F2937', fontWeight: 500 }}>
+                <div style={{ padding: '8px 0', fontSize: '0.9rem', color: '#1F2937', fontWeight: 500 }}>
                   Resources picked for your specific case
                 </div>
               </div>
             </div>
 
             <div>
-              <div style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'baseline', gap: '0.6rem' }}>
-                <span style={{ fontSize: '1.15rem', color: '#9CA3AF', textDecoration: 'line-through' }}>€380</span>
-                <span style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--ink-blue)', fontFamily: 'var(--font-serif)' }}>€300</span>
+              <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'baseline', gap: '0.6rem' }}>
+                <span style={{ fontSize: '1rem', color: '#9CA3AF', textDecoration: 'line-through' }}>€380</span>
+                <span style={{ fontSize: '1.75rem', fontWeight: 700, color: 'var(--ink-blue)', fontFamily: 'var(--font-serif)' }}>€300</span>
               </div>
 
               <a 
@@ -102,15 +101,14 @@ export const LeverageSection: React.FC = () => {
 
           {/* Card 2: Dark Featured Card (Coral CTA) */}
           <div style={{
-            backgroundColor: '#120554',
+            backgroundColor: '#160867', /* slightly lighter than ink-blue so it stands out */
             color: '#FFFFFF',
             borderRadius: 'var(--radius-card)',
-            padding: '2.5rem 2rem',
+            padding: '1.25rem',
             boxShadow: '0 16px 40px rgba(18, 5, 84, 0.35)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            height: '100%',
             transition: 'transform 0.25s ease'
           }} className="pricing-card-hover">
             <div>
@@ -138,29 +136,29 @@ export const LeverageSection: React.FC = () => {
               </h3>
 
               <p style={{
-                fontSize: '0.95rem',
+                fontSize: '0.9rem',
                 color: '#D1D5DB',
-                lineHeight: 1.6,
-                marginBottom: '1.75rem'
+                lineHeight: 1.5,
+                marginBottom: '1rem'
               }}>
                 Move from AI-curious to AI-capable in one session, built together.
               </p>
 
-              <div style={{ margin: '0 0 2rem 0' }}>
-                <div style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.12)', padding: '10px 0', fontSize: '0.925rem', color: '#F9FAFB', fontWeight: 500 }}>
+              <div style={{ margin: '0 0 1.5rem 0' }}>
+                <div style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.12)', padding: '8px 0', fontSize: '0.9rem', color: '#F9FAFB', fontWeight: 500 }}>
                   Group session, cohort, or 1:1
                 </div>
-                <div style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.12)', padding: '10px 0', fontSize: '0.925rem', color: '#F9FAFB', fontWeight: 500 }}>
+                <div style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.12)', padding: '8px 0', fontSize: '0.9rem', color: '#F9FAFB', fontWeight: 500 }}>
                   Live, custom skill built together
                 </div>
-                <div style={{ padding: '10px 0', fontSize: '0.925rem', color: '#F9FAFB', fontWeight: 500 }}>
+                <div style={{ padding: '8px 0', fontSize: '0.9rem', color: '#F9FAFB', fontWeight: 500 }}>
                   Follow-up materials and support
                 </div>
               </div>
             </div>
 
             <div>
-              <div style={{ fontSize: '0.9rem', color: '#9CA3AF', marginBottom: '1.25rem' }}>
+              <div style={{ fontSize: '0.85rem', color: '#9CA3AF', marginBottom: '1rem' }}>
                 Customized to your team or cohort.
               </div>
 
@@ -180,13 +178,12 @@ export const LeverageSection: React.FC = () => {
           <div style={{
             backgroundColor: '#FFFFFF',
             borderRadius: 'var(--radius-card)',
-            padding: '2.5rem 2rem',
+            padding: '1.25rem',
             border: '1.5px solid rgba(0, 0, 0, 0.1)',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.04)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            height: '100%',
             transition: 'transform 0.25s ease'
           }} className="pricing-card-hover">
             <div>
@@ -214,29 +211,29 @@ export const LeverageSection: React.FC = () => {
               </h3>
 
               <p style={{
-                fontSize: '0.95rem',
+                fontSize: '0.9rem',
                 color: '#6B7280',
-                lineHeight: 1.6,
-                marginBottom: '1.75rem'
+                lineHeight: 1.5,
+                marginBottom: '1rem'
               }}>
                 Documentation and connections so your tools understand how your team works.
               </p>
 
-              <div style={{ margin: '0 0 2rem 0' }}>
-                <div style={{ borderBottom: '1px solid #E5E7EB', padding: '10px 0', fontSize: '0.925rem', color: '#1F2937', fontWeight: 500 }}>
+              <div style={{ margin: '0 0 1.5rem 0' }}>
+                <div style={{ borderBottom: '1px solid #E5E7EB', padding: '8px 0', fontSize: '0.9rem', color: '#1F2937', fontWeight: 500 }}>
                   1:1 or team sessions
                 </div>
-                <div style={{ borderBottom: '1px solid #E5E7EB', padding: '10px 0', fontSize: '0.925rem', color: '#1F2937', fontWeight: 500 }}>
+                <div style={{ borderBottom: '1px solid #E5E7EB', padding: '8px 0', fontSize: '0.9rem', color: '#1F2937', fontWeight: 500 }}>
                   Custom system, and design work where it's useful
                 </div>
-                <div style={{ padding: '10px 0', fontSize: '0.925rem', color: '#1F2937', fontWeight: 500 }}>
+                <div style={{ padding: '8px 0', fontSize: '0.9rem', color: '#1F2937', fontWeight: 500 }}>
                   Ongoing refinement
                 </div>
               </div>
             </div>
 
             <div>
-              <div style={{ fontSize: '0.9rem', color: '#6B7280', marginBottom: '1.25rem' }}>
+              <div style={{ fontSize: '0.85rem', color: '#6B7280', marginBottom: '1rem' }}>
                 Scoped to your team, priced after a call.
               </div>
 

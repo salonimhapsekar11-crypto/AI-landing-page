@@ -5,9 +5,9 @@ export const HeroSection: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section className="bg-textured-dark" style={{
-      padding: '5.5rem 1.5rem 6.5rem 1.5rem',
-      minHeight: '82vh',
+    <section className="section bg-textured-dark" style={{
+      minHeight: '92vh',
+      paddingTop: '8rem',
       display: 'flex',
       alignItems: 'center'
     }}>
@@ -21,7 +21,7 @@ export const HeroSection: React.FC = () => {
         {/* Left Column */}
         <div style={{ maxWidth: '540px' }}>
           <h1 style={{
-            fontSize: 'clamp(2.75rem, 5.2vw, 4rem)',
+            fontSize: 'clamp(2.25rem, 4.5vw, 3.25rem)',
             fontFamily: 'var(--font-serif)',
             fontWeight: 700,
             color: '#FFFFFF',
@@ -60,7 +60,7 @@ export const HeroSection: React.FC = () => {
         <div style={{
           position: 'relative',
           width: '100%',
-          maxWidth: '440px',
+          maxWidth: '396px',
           margin: '0 auto',
           transform: 'rotate(-2deg)',
           borderRadius: '24px',
