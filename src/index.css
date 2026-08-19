@@ -112,8 +112,8 @@ mark {
 
 /* Button Component Variants */
 .btn-yellow {
-  background-color: var(--yellow-cta);
-  color: var(--black);
+  background-color: var(--skyblue-accent);
+  color: var(--ink-blue);
   font-weight: 700;
   padding: 0.9rem 2.25rem;
   border-radius: var(--radius-pill);
@@ -127,7 +127,7 @@ mark {
 }
 
 .btn-yellow:hover {
-  background-color: var(--yellow-cta-hover);
+  background-color: #26ABED;
   transform: translateY(-2px);
 }
 
@@ -151,8 +151,8 @@ mark {
 }
 
 .btn-coral {
-  background-color: var(--coral-accent);
-  color: #FFFFFF;
+  background-color: var(--skyblue-accent);
+  color: var(--ink-blue);
   font-weight: 700;
   padding: 0.9rem 2.25rem;
   border-radius: var(--radius-pill);
@@ -165,7 +165,7 @@ mark {
 }
 
 .btn-coral:hover {
-  background-color: var(--coral-accent-hover);
+  background-color: #26ABED;
   transform: translateY(-2px);
 }
 

@@ -12,7 +12,9 @@ export const Header: React.FC = () => {
       right: '24px',
       zIndex: 1000,
       display: 'flex',
-      justifyContent: 'center',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '12px',
       pointerEvents: 'none'
     }}>
       <div className="container" style={{
@@ -84,10 +86,14 @@ export const Header: React.FC = () => {
         <div style={{
           backgroundColor: '#FFFFFF',
           padding: '1.5rem',
-          borderBottom: '1px solid #E5E7EB',
+          borderRadius: '20px',
+          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08)',
+          width: '100%',
+          maxWidth: '1140px',
           display: 'flex',
           flexDirection: 'column',
-          gap: '1.25rem'
+          gap: '1.25rem',
+          pointerEvents: 'auto'
         }} className="mobile-menu">
           <a href="#about" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 500, color: 'var(--black)' }}>About me</a>
           <a href="https://simplysals.framer.website/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 500, color: 'var(--black)' }}>Design Services</a>

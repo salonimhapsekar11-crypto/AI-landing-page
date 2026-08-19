@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Play, X } from 'lucide-react';
+import heroImg from '../assets/hero.jpg';
 
 export const HeroSection: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -79,9 +80,9 @@ export const HeroSection: React.FC = () => {
                 height: '100%',
                 cursor: 'pointer',
                 position: 'relative',
-                backgroundImage: `url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80')`,
+                backgroundImage: `url(${heroImg})`,
                 backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundPosition: 'center top',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'

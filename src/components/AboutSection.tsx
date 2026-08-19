@@ -1,4 +1,5 @@
 import React from 'react';
+import aboutMeImg from '../assets/about-me.jpg';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -24,7 +25,7 @@ export const AboutSection: React.FC = () => {
             margin: '0 auto'
           }}>
             <img 
-              src="/assets/about-me.jpg" 
+              src={aboutMeImg} 
               alt="Saloni Mhapsekar" 
               style={{
                 width: '100%',
