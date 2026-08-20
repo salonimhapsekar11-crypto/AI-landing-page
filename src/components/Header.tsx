@@ -56,6 +56,15 @@ export const Header: React.FC = () => {
             >
               Design Services
             </a>
+            <a 
+              href="https://www.linkedin.com/in/saloni-mhapsekar/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="nav-link"
+              style={{ fontWeight: 500, fontSize: '0.95rem', color: 'var(--ink-blue)', opacity: 0.85, transition: 'opacity 0.2s' }}
+            >
+              LinkedIn
+            </a>
           </nav>
         </div>
 
@@ -97,6 +106,7 @@ export const Header: React.FC = () => {
         }} className="mobile-menu">
           <a href="#about" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 500, color: 'var(--black)' }}>About me</a>
           <a href="https://simplysals.framer.website/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 500, color: 'var(--black)' }}>Design Services</a>
+          <a href="https://www.linkedin.com/in/saloni-mhapsekar/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 500, color: 'var(--black)' }}>LinkedIn</a>
           <a href="https://simplysals.substack.com/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="btn-pill-outline" style={{ textAlign: 'center' }}>Subscribe on Substack</a>
         </div>
       )}

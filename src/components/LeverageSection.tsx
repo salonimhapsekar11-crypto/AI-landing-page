@@ -53,7 +53,7 @@ export const LeverageSection: React.FC = () => {
 
               <h3 style={{
                 fontSize: '1.5rem',
-                fontFamily: 'var(--font-serif)',
+                fontFamily: 'var(--font-sans)',
                 fontWeight: 700,
                 color: 'var(--ink-blue)',
                 marginBottom: '0.85rem'
@@ -114,8 +114,8 @@ export const LeverageSection: React.FC = () => {
             <div>
               <span style={{
                 display: 'inline-block',
-                backgroundColor: '#4C0519',
-                color: '#F43F5E',
+                backgroundColor: '#FFE4E6',
+                color: '#E11D48',
                 fontSize: '0.8rem',
                 fontWeight: 700,
                 padding: '4px 14px',
@@ -127,7 +127,7 @@ export const LeverageSection: React.FC = () => {
 
               <h3 style={{
                 fontSize: '1.5rem',
-                fontFamily: 'var(--font-serif)',
+                fontFamily: 'var(--font-sans)',
                 fontWeight: 700,
                 color: '#FFFFFF',
                 marginBottom: '0.85rem'
@@ -202,7 +202,7 @@ export const LeverageSection: React.FC = () => {
 
               <h3 style={{
                 fontSize: '1.5rem',
-                fontFamily: 'var(--font-serif)',
+                fontFamily: 'var(--font-sans)',
                 fontWeight: 700,
                 color: 'var(--ink-blue)',
                 marginBottom: '0.85rem'

@@ -48,7 +48,7 @@ export const AuditFormSection: React.FC = () => {
   };
 
   return (
-    <section id="audit-section" className="section" style={{ backgroundColor: 'var(--bg-offwhite-2)' }}>
+    <section id="audit-section" className="section" style={{ backgroundColor: 'var(--bg-offwhite-2)', paddingTop: '1.5rem', paddingBottom: '1.5rem' }}>
       <div className="container">
         
         {/* Floating Dark Blue Rounded Card (no shadow, textured overlay) */}
@@ -59,7 +59,7 @@ export const AuditFormSection: React.FC = () => {
         }}>
           
           {/* Centered Heading + Subcopy */}
-          <div style={{ textAlign: 'center', marginBottom: '2.5rem', maxWidth: '640px', margin: '0 auto 2.5rem auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2.5rem', maxWidth: '760px', margin: '0 auto 2.5rem auto' }}>
             <h2 style={{
               fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
               fontFamily: 'var(--font-serif)',

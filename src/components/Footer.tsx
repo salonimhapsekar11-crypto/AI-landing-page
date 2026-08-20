@@ -89,8 +89,11 @@ export const Footer: React.FC = () => {
           <div>
             © {new Date().getFullYear()} Simply Saloni. All rights reserved.
           </div>
-          <div>
-            AI Workflows & Product Strategy
+          <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
+            <a href="https://www.linkedin.com/in/saloni-mhapsekar/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'underline' }}>
+              LinkedIn
+            </a>
+            <span>AI Workflows & Product Strategy</span>
           </div>
         </div>
 
