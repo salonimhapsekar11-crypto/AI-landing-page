@@ -58,6 +58,7 @@ export const HeroSection: React.FC = () => {
         </div>
 
         {/* Right Column: Tilted (-2deg) Workshop Video Card (HIDDEN TEMPORARILY) */}
+        {/*
         <div style={{
           display: 'none', // Hidden as requested until video is ready
           position: 'relative',
@@ -89,14 +90,12 @@ export const HeroSection: React.FC = () => {
                 justifyContent: 'center'
               }}
             >
-              {/* Dark Overlay */}
               <div style={{
                 position: 'absolute',
                 inset: 0,
                 backgroundColor: 'rgba(0, 0, 0, 0.2)'
               }} />
 
-              {/* White Play Button Overlay */}
               <div style={{
                 position: 'relative',
                 zIndex: 2,
@@ -151,6 +150,7 @@ export const HeroSection: React.FC = () => {
             </div>
           )}
         </div>
+        */}
 
         {/* Temporary Image Card Variant */}
         <div 
