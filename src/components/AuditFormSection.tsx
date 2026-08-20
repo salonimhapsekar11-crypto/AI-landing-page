@@ -51,10 +51,9 @@ export const AuditFormSection: React.FC = () => {
     <section id="audit-section" className="section" style={{ backgroundColor: 'var(--bg-offwhite-2)', paddingTop: '1.5rem', paddingBottom: '1.5rem' }}>
       <div className="container">
         
-        {/* Floating Dark Blue Rounded Card (no shadow, textured overlay) */}
         <div className="bg-textured-dark" style={{
           borderRadius: 'var(--radius-lg)',
-          padding: 'clamp(2.5rem, 5vw, 4rem)',
+          padding: 'clamp(1.5rem, 5vw, 4rem)',
           color: '#FFFFFF'
         }}>
           
@@ -121,7 +120,7 @@ export const AuditFormSection: React.FC = () => {
               {/* Two Dropdowns */}
               <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
                 gap: '1.25rem'
               }}>
                 <select
@@ -159,7 +158,7 @@ export const AuditFormSection: React.FC = () => {
               {/* Email Input & Coral Button */}
               <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
                 gap: '1.25rem'
               }}>
                 <input
