@@ -57,8 +57,9 @@ export const HeroSection: React.FC = () => {
           </a>
         </div>
 
-        {/* Right Column: Tilted (-2deg) Workshop Video Card */}
+        {/* Right Column: Tilted (-2deg) Workshop Video Card (HIDDEN TEMPORARILY) */}
         <div style={{
+          display: 'none', // Hidden as requested until video is ready
           position: 'relative',
           width: '100%',
           maxWidth: '396px',
@@ -151,6 +152,25 @@ export const HeroSection: React.FC = () => {
           )}
         </div>
 
+        {/* Temporary Image Card Variant */}
+        <div 
+          className="hero-image-card"
+          style={{
+            width: '100%',
+            maxWidth: '380px',
+            aspectRatio: '3/4',
+            margin: '0 auto',
+            borderRadius: '24px',
+            overflow: 'hidden',
+            boxShadow: '0 25px 50px rgba(0, 0, 0, 0.3)',
+            backgroundImage: `url(${heroImg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center top',
+            transform: 'rotate(-2deg)',
+            transition: 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease'
+          }} 
+        />
+
       </div>
 
       <style>{`
@@ -160,12 +180,16 @@ export const HeroSection: React.FC = () => {
             gap: 3.5rem !important;
             text-align: center;
           }
-          .hero-tilted-card {
+          .hero-tilted-card, .hero-image-card {
             transform: rotate(0deg) !important;
           }
         }
         .hero-tilted-card:hover {
           transform: rotate(0deg) scale(1.02);
+        }
+        .hero-image-card:hover {
+          transform: rotate(0deg) translateY(-8px);
+          box-shadow: 0 35px 60px rgba(0, 0, 0, 0.4) !important;
         }
         .play-button-hover:hover {
           transform: scale(1.1);
