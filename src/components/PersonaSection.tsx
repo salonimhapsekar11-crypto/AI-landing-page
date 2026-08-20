@@ -88,7 +88,7 @@ export const PersonaSection: React.FC = () => {
                 marginBottom: '1.25rem'
               }}>
                 Your team has shared accounts <br />
-                <mark>no actual system.</mark>
+                but <mark>no shared systems.</mark>
               </h3>
 
               <p style={{

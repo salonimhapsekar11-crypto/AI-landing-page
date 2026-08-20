@@ -57,7 +57,7 @@ export const AboutSection: React.FC = () => {
               fontWeight: 400,
               marginBottom: '1.5rem'
             }}>
-              With 4+ years as a product designer, I translate jargon into whatever language the room needs Whether it be a founder, marketer, or fellow designer.
+              I'm a Senior Product Designer with 4+ years of experience designing products and driving 0-to-1 growth for early-stage ecommerce teams. My edge isn't that I use AI. It's that I've iterated enough to know where it earns its place and where it doesn't.
             </p>
 
             <p style={{
@@ -67,7 +67,7 @@ export const AboutSection: React.FC = () => {
               fontFamily: 'var(--font-sans)',
               fontWeight: 400
             }}>
-              My background in 0-to-1 and ecommerce growth means I've built workflows under real business constraints, not just in theory. Every method I teach is grounded in research and design thinking, tested on my own work first, then shaped into something a live group can actually use. The same facilitation skill I've built running sessions at UXcamp Europe and a 48-hour Service Design Jam.
+              I test AI in my own practice first, then turn what works into hands-on workflows. Less AI hype. More testing, collaborating, and building things that actually hold up.
             </p>
           </div>
 

@@ -8,6 +8,7 @@ import { LeverageSection } from './components/LeverageSection';
 import { WorkshopsSection } from './components/WorkshopsSection';
 import { AboutSection } from './components/AboutSection';
 import { Footer } from './components/Footer';
+import { AgenticOutcomesSection } from './components/AgenticOutcomesSection';
 
 export const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ export const App: React.FC = () => {
         <HeroSection />
         <PersonaSection />
         <AuditFormSection />
+        <AgenticOutcomesSection />
         <TestimonialsSection />
         <LeverageSection />
         <AboutSection />
