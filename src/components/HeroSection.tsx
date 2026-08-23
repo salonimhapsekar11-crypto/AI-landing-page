@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Play, X } from 'lucide-react';
+import React from 'react';
+
 import heroImg from '../assets/hero.jpg';
 
 export const HeroSection: React.FC = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+
 
   return (
     <section className="section bg-textured-dark" style={{
