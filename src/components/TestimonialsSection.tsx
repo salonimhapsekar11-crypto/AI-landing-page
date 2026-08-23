@@ -56,7 +56,7 @@ export const TestimonialsSection: React.FC = () => {
                 fontWeight: 500,
                 marginBottom: '2rem'
               }}>
-                <mark>6 hours/week recovered</mark> . The workflow system cut my review time from 8 to 2 hours. I'm actually shipping design work again instead of just managing feedback cycles.
+                Saloni's talk on trust and how she built the skill behind it was the <mark>most insightful session</mark> at the table. In a moment where AI feels like a bubble, her demo actually showed how it can <mark>make our work easier without sacrificing quality</mark>.
               </p>
             </div>
 
