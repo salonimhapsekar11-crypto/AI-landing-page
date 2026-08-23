@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CheckCircle2, Loader2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import { submitAuditRequest } from '../firebase';
+
 
 export const AuditFormSection: React.FC = () => {
   const [auditUrl, setAuditUrl] = useState('');
@@ -24,16 +24,24 @@ export const AuditFormSection: React.FC = () => {
 
     setSubmitting(true);
 
-    const res = await submitAuditRequest({
-      auditUrl,
-      lookAtOption,
-      hesitateOption,
-      email
-    });
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw4XtSW8hS3QYN3PSnr-gALg59dlg8Ai5gEBnq7iKzglTSD30gxpZmMAF9aXQCIC6QJ/exec";
+    
+    try {
+      await fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          auditUrl,
+          lookAtOption,
+          hesitateOption,
+          email
+        })
+      });
 
-    setSubmitting(false);
-
-    if (res.success) {
+      // Because of 'no-cors', the response is opaque and we assume success if it doesn't throw
       setSubmitted(true);
       try {
         confetti({
@@ -42,8 +50,11 @@ export const AuditFormSection: React.FC = () => {
           origin: { y: 0.6 }
         });
       } catch (err) {}
-    } else {
+      
+    } catch (err) {
       setErrorMessage('Submission failed. Please try again.');
+    } finally {
+      setSubmitting(false);
     }
   };
 
