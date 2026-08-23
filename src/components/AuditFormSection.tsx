@@ -90,7 +90,7 @@ export const AuditFormSection: React.FC = () => {
               <p style={{ fontSize: '1.1rem', color: '#FFFFFF' }}>Thanks! I'll be in touch about your audit soon.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', maxWidth: '720px', margin: '0 auto', width: '100%' }}>
               
               {errorMessage && (
                 <div style={{

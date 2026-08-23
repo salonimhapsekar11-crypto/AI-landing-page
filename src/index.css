@@ -246,6 +246,8 @@ mark {
 /* Form Pill Inputs */
 .input-pill-white {
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
   background-color: #FFFFFF;
   border: none;
   border-radius: 12px;
@@ -255,6 +257,10 @@ mark {
   color: var(--black);
   outline: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  -webkit-appearance: none; /* fixes iOS select styling issues */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .input-pill-white::placeholder {
