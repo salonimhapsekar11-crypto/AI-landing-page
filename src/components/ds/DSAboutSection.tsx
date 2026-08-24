@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutMeImg from '../assets/about-me.jpg';
+import aboutMeImg from '../../assets/about-me.jpg';
 
 export const DSAboutSection: React.FC = () => {
   return (

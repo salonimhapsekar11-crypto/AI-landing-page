@@ -1,6 +1,6 @@
 import React from 'react';
 
-import heroImg from '../assets/hero.jpg';
+import heroImg from '../../assets/hero.jpg';
 
 export const DSHeroSection: React.FC = () => {
 
