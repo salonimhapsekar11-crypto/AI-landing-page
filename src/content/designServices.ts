@@ -115,6 +115,32 @@ export const dsContent = {
     paragraph1: "Senior Product Designer, 4+ years driving 0-to-1 growth for brands that live or die on trust, from the first LinkedIn post to the website that closes the sale.",
     paragraph2: "I use AI in my own work every day, which is exactly why I'm careful with it. I've watched my own writing go flat when I let a tool do too much of it. Everything I build is designed so that doesn't happen to you."
   },
+  howItWorks: {
+    eyebrow: "No ambiguity",
+    headline: "How this actually works",
+    steps: [
+      {
+        number: "1",
+        title: "Audit",
+        body: "We start with the trust audit. I go through your LinkedIn, Instagram, and website and show you exactly where trust is breaking, in writing, before anything gets designed."
+      },
+      {
+        number: "2",
+        title: "Positioning",
+        body: "We define what makes you specifically believable, not generic brand language, the actual reason someone should trust you over the ten other accounts that look like yours."
+      },
+      {
+        number: "3",
+        title: "Build",
+        body: "I design the system: voice, visuals, and the workflows that hold it together, live, with you, so you understand every decision instead of receiving a file at the end."
+      },
+      {
+        number: "4",
+        title: "Handover",
+        body: "You leave with templates and a workflow you can run yourself. I'm not a dependency. If you want ongoing support, that's the third pricing tier, not a requirement."
+      }
+    ]
+  },
   workshops: {
     heading: "Live Workshops",
     framingLine: "Want to learn the workflow yourself? If you'd rather build the system with your team than hand it off, here's what's coming up."

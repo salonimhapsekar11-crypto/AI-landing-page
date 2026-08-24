@@ -4,6 +4,7 @@ import { DSProblemSection } from '../components/ds/DSProblemSection';
 import { DSPersonaSection } from '../components/ds/DSPersonaSection';
 import { DSAuditFormSection } from '../components/ds/DSAuditFormSection';
 import { DSOutcomesSection } from '../components/ds/DSOutcomesSection';
+import { DSHowItWorksSection } from '../components/ds/DSHowItWorksSection';
 import { TestimonialsSection } from '../components/TestimonialsSection';
 import { DSPricingSection } from '../components/ds/DSPricingSection';
 import { DSAboutSection } from '../components/ds/DSAboutSection';
@@ -23,6 +24,7 @@ export const DesignServicesPage: React.FC = () => {
       <DSPersonaSection />
       <DSAuditFormSection />
       <DSOutcomesSection />
+      <DSHowItWorksSection />
       <TestimonialsSection />
       <DSPricingSection />
       <DSAboutSection />
