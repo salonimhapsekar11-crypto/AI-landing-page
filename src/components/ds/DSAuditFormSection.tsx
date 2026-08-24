@@ -1,0 +1,195 @@
+import React, { useState } from 'react';
+import { CheckCircle2, Loader2 } from 'lucide-react';
+import confetti from 'canvas-confetti';
+
+
+export const DSAuditFormSection: React.FC = () => {
+  const [auditUrl, setAuditUrl] = useState('');
+  const [lookAtOption, setLookAtOption] = useState('');
+  const [hesitateOption, setHesitateOption] = useState('');
+  const [email, setEmail] = useState('');
+
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setErrorMessage('');
+
+    if (!auditUrl || !lookAtOption || !hesitateOption || !email) {
+      setErrorMessage('Please fill in all required fields.');
+      return;
+    }
+
+    setSubmitting(true);
+
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw4XtSW8hS3QYN3PSnr-gALg59dlg8Ai5gEBnq7iKzglTSD30gxpZmMAF9aXQCIC6QJ/exec";
+    
+    try {
+      await fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          auditUrl,
+          lookAtOption,
+          hesitateOption,
+          email
+        })
+      });
+
+      // Because of 'no-cors', the response is opaque and we assume success if it doesn't throw
+      setSubmitted(true);
+      try {
+        confetti({
+          particleCount: 80,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+      } catch (err) {}
+      
+    } catch (err) {
+      setErrorMessage('Submission failed. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <section id="audit-section" className="section" style={{ backgroundColor: 'var(--bg-offwhite-2)', paddingTop: '1.5rem', paddingBottom: '1.5rem' }}>
+      <div className="container">
+        
+        <div className="bg-textured-dark" style={{
+          borderRadius: 'var(--radius-lg)',
+          padding: 'clamp(1.5rem, 5vw, 4rem)',
+          color: '#FFFFFF'
+        }}>
+          
+          {/* Centered Heading + Subcopy */}
+          <div style={{ textAlign: 'center', marginBottom: '2.5rem', maxWidth: '760px', margin: '0 auto 2.5rem auto' }}>
+            <h2 style={{
+              fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
+              fontFamily: 'var(--font-serif)',
+              fontWeight: 700,
+              color: '#FFFFFF',
+              marginBottom: '1rem'
+            }}>
+              Find What's Losing You Trust
+            </h2>
+            <p style={{
+              color: 'rgba(255, 255, 255, 0.95)',
+              fontSize: '1.05rem',
+              lineHeight: 1.6
+            }}>
+              Send me your Instagram, your landing page, or your deck. I'll tell you exactly where people stop trusting you, and reply personally within 48 hours.
+            </p>
+          </div>
+
+          {submitted ? (
+            <div style={{
+              textAlign: 'center',
+              padding: '3rem 1.5rem',
+              backgroundColor: 'rgba(255, 255, 255, 0.12)',
+              backdropFilter: 'blur(10px)',
+              borderRadius: 'var(--radius-card)'
+            }}>
+              <CheckCircle2 size={48} style={{ color: 'var(--skyblue-accent)', margin: '0 auto 1rem auto' }} />
+              <h3 style={{ fontSize: '1.75rem', color: '#FFFFFF', marginBottom: '0.5rem', fontFamily: 'var(--font-serif)' }}>Audit Requested!</h3>
+              <p style={{ fontSize: '1.1rem', color: '#FFFFFF' }}>Thanks! I'll be in touch about your audit soon.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', maxWidth: '720px', margin: '0 auto', width: '100%' }}>
+              
+              {errorMessage && (
+                <div style={{
+                  padding: '0.85rem 1.25rem',
+                  backgroundColor: '#FEE2E2',
+                  color: '#991B1B',
+                  borderRadius: 'var(--radius-pill)',
+                  fontSize: '0.95rem',
+                  textAlign: 'center'
+                }}>
+                  {errorMessage}
+                </div>
+              )}
+
+              {/* URL Input */}
+              <div>
+                <input
+                  type="url"
+                  required
+                  placeholder="Link to what you want audited"
+                  value={auditUrl}
+                  onChange={(e) => setAuditUrl(e.target.value)}
+                  className="input-pill-white"
+                />
+              </div>
+
+              {/* Two Text Inputs */}
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                gap: '1.25rem'
+              }}>
+                <input
+                  type="text"
+                  required
+                  placeholder="What should I look at? (e.g. Instagram, website, deck, logo)"
+                  value={lookAtOption}
+                  onChange={(e) => setLookAtOption(e.target.value)}
+                  className="input-pill-white"
+                />
+
+                <input
+                  type="text"
+                  required
+                  placeholder="Where people hesitate or drop off"
+                  value={hesitateOption}
+                  onChange={(e) => setHesitateOption(e.target.value)}
+                  className="input-pill-white"
+                />
+              </div>
+
+              {/* Email Input & Coral Button */}
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                gap: '1.25rem'
+              }}>
+                <input
+                  type="email"
+                  required
+                  placeholder="you@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="input-pill-white"
+                />
+
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="btn-coral"
+                  style={{ width: '100%', fontSize: '1.05rem' }}
+                >
+                  {submitting ? (
+                    <>
+                      <Loader2 size={18} className="animate-spin" /> Submitting...
+                    </>
+                  ) : (
+                    'Get my audit'
+                  )}
+                </button>
+              </div>
+
+            </form>
+          )}
+
+        </div>
+
+      </div>
+    </section>
+  );
+};
