@@ -1,6 +1,9 @@
 import React from 'react';
+import { dsContent } from '../../content/designServices';
 
 export const DSOutcomesSection: React.FC = () => {
+  const content = dsContent.outcomes;
+
   return (
     <section className="section" style={{ backgroundColor: '#ede7f6', paddingBottom: '5rem' }}>
       <div className="container">
@@ -15,7 +18,7 @@ export const DSOutcomesSection: React.FC = () => {
             marginBottom: '1rem',
             lineHeight: 1.15
           }}>
-            Build trust. Then convert it.
+            {content.heading}
           </h2>
           <p style={{
             fontSize: '1.15rem',
@@ -24,7 +27,7 @@ export const DSOutcomesSection: React.FC = () => {
             fontFamily: 'var(--font-sans)',
             margin: 0
           }}>
-            One system, four surfaces. LinkedIn and Instagram build trust before someone's ready to buy. Your brand visuals and website convert it once they are. Most brands are now generic on all four at once.
+            {content.subhead}
           </p>
         </div>
 
@@ -56,7 +59,7 @@ export const DSOutcomesSection: React.FC = () => {
                 marginBottom: '1rem',
                 lineHeight: 1.3
               }}>
-                Where trust gets built
+                {content.card1.heading}
               </h3>
               <p style={{
                 fontSize: '1.05rem',
@@ -64,38 +67,22 @@ export const DSOutcomesSection: React.FC = () => {
                 lineHeight: 1.6,
                 margin: 0
               }}>
-                LinkedIn and Instagram. Content that sounds like a person with a point of view, not a brand running the same prompt as its competitors. Consistent enough to be recognised, specific enough to be believed.
+                {content.card1.body}
               </p>
             </div>
             {/* Tags Container */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
-              <span style={{
-                backgroundColor: 'var(--yellow-cta)',
-                color: 'var(--black)',
-                fontSize: '0.85rem',
-                fontWeight: 700,
-                padding: '6px 14px',
-                borderRadius: 'var(--radius-pill)',
-                letterSpacing: '0.02em'
-              }}>Voice System</span>
-              <span style={{
-                backgroundColor: 'var(--yellow-cta)',
-                color: 'var(--black)',
-                fontSize: '0.85rem',
-                fontWeight: 700,
-                padding: '6px 14px',
-                borderRadius: 'var(--radius-pill)',
-                letterSpacing: '0.02em'
-              }}>Content Workflow</span>
-              <span style={{
-                backgroundColor: 'var(--yellow-cta)',
-                color: 'var(--black)',
-                fontSize: '0.85rem',
-                fontWeight: 700,
-                padding: '6px 14px',
-                borderRadius: 'var(--radius-pill)',
-                letterSpacing: '0.02em'
-              }}>Visual Templates</span>
+              {content.card1.tags.map((tag, i) => (
+                <span key={i} style={{
+                  backgroundColor: 'var(--yellow-cta)',
+                  color: 'var(--black)',
+                  fontSize: '0.85rem',
+                  fontWeight: 700,
+                  padding: '6px 14px',
+                  borderRadius: 'var(--radius-pill)',
+                  letterSpacing: '0.02em'
+                }}>{tag}</span>
+              ))}
             </div>
           </div>
 
@@ -118,7 +105,7 @@ export const DSOutcomesSection: React.FC = () => {
                 marginBottom: '1rem',
                 lineHeight: 1.3
               }}>
-                Where trust gets converted
+                {content.card2.heading}
               </h3>
               <p style={{
                 fontSize: '1.05rem',
@@ -126,38 +113,22 @@ export const DSOutcomesSection: React.FC = () => {
                 lineHeight: 1.6,
                 margin: 0
               }}>
-                Your brand visuals, decks, and website. The moment someone decides whether the thing you've been posting about is real. This is where inconsistency costs you money.
+                {content.card2.body}
               </p>
             </div>
             {/* Tags Container */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
-              <span style={{
-                backgroundColor: 'var(--yellow-cta)',
-                color: 'var(--black)',
-                fontSize: '0.85rem',
-                fontWeight: 700,
-                padding: '6px 14px',
-                borderRadius: 'var(--radius-pill)',
-                letterSpacing: '0.02em'
-              }}>Brand Identity</span>
-              <span style={{
-                backgroundColor: 'var(--yellow-cta)',
-                color: 'var(--black)',
-                fontSize: '0.85rem',
-                fontWeight: 700,
-                padding: '6px 14px',
-                borderRadius: 'var(--radius-pill)',
-                letterSpacing: '0.02em'
-              }}>Landing Page Design</span>
-              <span style={{
-                backgroundColor: 'var(--yellow-cta)',
-                color: 'var(--black)',
-                fontSize: '0.85rem',
-                fontWeight: 700,
-                padding: '6px 14px',
-                borderRadius: 'var(--radius-pill)',
-                letterSpacing: '0.02em'
-              }}>Trust Audit</span>
+              {content.card2.tags.map((tag, i) => (
+                <span key={i} style={{
+                  backgroundColor: 'var(--yellow-cta)',
+                  color: 'var(--black)',
+                  fontSize: '0.85rem',
+                  fontWeight: 700,
+                  padding: '6px 14px',
+                  borderRadius: 'var(--radius-pill)',
+                  letterSpacing: '0.02em'
+                }}>{tag}</span>
+              ))}
             </div>
           </div>
 

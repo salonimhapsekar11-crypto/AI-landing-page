@@ -1,9 +1,9 @@
 import React from 'react';
-
 import heroImg from '../../assets/hero.jpg';
+import { dsContent } from '../../content/designServices';
 
 export const DSHeroSection: React.FC = () => {
-
+  const content = dsContent.hero;
 
   return (
     <section className="section bg-textured-dark" style={{
@@ -29,7 +29,7 @@ export const DSHeroSection: React.FC = () => {
             lineHeight: 1.15,
             marginBottom: '1.5rem'
           }}>
-            I build the brand system that earns trust, and the website that turns it into customers.
+            {content.headline}
           </h1>
 
           <p style={{
@@ -40,11 +40,11 @@ export const DSHeroSection: React.FC = () => {
             fontFamily: 'var(--font-sans)',
             fontWeight: 400
           }}>
-            One connected system across LinkedIn, Instagram, brand visuals, and your website. Built to sound like you, not like an AI wrote it, and built so you can keep running it yourself.
+            {content.subhead}
           </p>
 
           <a 
-            href="https://calendly.com/simplysaloni/30min" 
+            href={content.ctaLink}
             target="_blank" 
             rel="noopener noreferrer"
             className="btn-yellow"
@@ -53,7 +53,7 @@ export const DSHeroSection: React.FC = () => {
               padding: '0.95rem 2.25rem'
             }}
           >
-            Book a Discovery Call
+            {content.ctaButton}
           </a>
         </div>
 
